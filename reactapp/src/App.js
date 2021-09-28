@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // testing react
+  // testing react app with setup branch
   return (
     <div className="App">
       <header className="App-header">
