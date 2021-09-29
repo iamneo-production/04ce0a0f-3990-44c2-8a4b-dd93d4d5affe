@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Build and analyze
+      - name: Build and Analyze
         env:
           GITHUB_TOKEN: 04ce0a0f-3990-44c2-8a4b-dd93d4d5affe
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
