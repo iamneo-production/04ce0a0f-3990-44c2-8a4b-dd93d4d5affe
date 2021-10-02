@@ -1,10 +1,10 @@
 package com.examly.springapp.repository;
 
-import com.examly.springapp.model.UserModel;
+import com.examly.springapp.model.User;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<UserModel, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 
-    UserModel findByEmail(String email);
-    
+    User findByEmail(String email);
+
 }
