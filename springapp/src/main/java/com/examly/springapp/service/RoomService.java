@@ -34,6 +34,12 @@ public class RoomService {
         roomRepository.deleteById(id);
     }
 
+    public void bookRoom(int id){
+        Room room = roomRepository.findById(id).get();
+        room.setStatus("BOOKED");
+        roomRepository.save(room);
+    }
+
     public List<Room> getRooms(String email){
         return roomRepository.findByAdminId(adminRepository.findByEmail(email).getId());
     }

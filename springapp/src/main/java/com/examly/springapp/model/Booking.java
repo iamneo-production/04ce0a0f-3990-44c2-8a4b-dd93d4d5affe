@@ -1,6 +1,7 @@
 package com.examly.springapp.model;
 
 import javax.persistence.Entity;
+import com.examly.springapp.model.Room;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import lombok.Getter;
@@ -8,20 +9,19 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity(name="room")
-public class Room {
+@Entity(name="Booking")
+public class Booking {
 
     @Id
     @GeneratedValue
     int id;
 
-    String roomNo;
-
-    int adminId;
-
-    String status = "AVAILABLE";
+    int userId;
 
     String price;
 
-    String type;
+    int roomId;
+
+    int adminId;
+
 }
