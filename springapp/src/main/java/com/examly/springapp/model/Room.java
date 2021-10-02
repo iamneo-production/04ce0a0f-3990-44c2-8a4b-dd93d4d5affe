@@ -17,7 +17,7 @@ public class Room {
 
     String roomNo;
 
-    String adminId;
+    int adminId;
 
     String status;
 
