@@ -34,10 +34,8 @@ public class RoomService {
         roomRepository.deleteById(id);
     }
 
-    
-
-    public List<Room> getRooms(int adminId){
-        return roomRepository.findByAdminId(adminId);
+    public List<Room> getRooms(String email){
+        return roomRepository.findByAdminId(adminRepository.findByEmail(email).getId());
     }
 
     
