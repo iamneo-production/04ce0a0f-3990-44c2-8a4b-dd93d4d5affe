@@ -22,6 +22,12 @@ public class Booking {
 
     int roomId;
 
+    String hotelName;
+
+    String hotelImageURL;
+
+    String hotelAddress;
+
     int adminId;
 
 }

@@ -8,7 +8,7 @@ public interface BookingRepository extends CrudRepository<Booking, Integer> {
 
     List<Booking> findByAdminId(int adminId);
 
-    List<Booking> findByUserId(int userId);  
+    List<Booking> findByUserId(int userId); 
 
 
 }

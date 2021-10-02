@@ -4,6 +4,8 @@ package com.examly.springapp.controller;
 import com.examly.springapp.model.User;
 import com.examly.springapp.model.Admin;
 import com.examly.springapp.model.Room;
+import com.examly.springapp.model.Booking;
+import com.examly.springapp.model.BookingData;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +32,24 @@ public class UserController {
     }
 
     @PostMapping("/user/rooms")
-    public List<Room> hotelRooms(@RequestParam("id") int adminId){
-        return userService.hotelRooms(adminId);
+    public List<Room> hotelRooms(@RequestParam("id") int id){
+        return userService.hotelRooms(id);
     }
 
     @PostMapping("/user/roomsDetails")
-    public Room roomDetails(@RequestParam("id") int roomId){
-        return userService.roomDetails(roomId);
+    public Room roomDetails(@RequestParam("id") int id){
+        return userService.roomDetails();
     }
+
+    @PostMapping("/user/bookRoom")
+    public Booking bookRoom(@RequestBody BookingData booking){
+        return userService.userBookRoom(booking);
+    }
+
+    @PostMapping("/user/bookings")
+    public Booking bookRoom(@RequestParam("id") int id){
+        return userService.userBookings(id);
+    }
+
 
 }

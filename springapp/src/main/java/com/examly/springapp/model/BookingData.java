@@ -11,10 +11,12 @@ public class BookingData {
 
     int bookingId;
 
-    User user;
+    int userId;
 
     String price;
 
-    Room room;
+    int roomId;
+
+    int adminId;
 
 }
