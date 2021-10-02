@@ -16,9 +16,4 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping("/user/signup")
-    public User registerUser(@RequestBody User user){
-        return userService.createUser(user);
-    }
-
 }
