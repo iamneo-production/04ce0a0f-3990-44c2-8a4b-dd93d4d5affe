@@ -21,7 +21,7 @@ public class User {
 
     String password;
 
-    String mobile;
+    String mobileNumber;
 
     int age;
 
