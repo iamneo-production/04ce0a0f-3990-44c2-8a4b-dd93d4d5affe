@@ -38,7 +38,7 @@ public class UserController {
 
     @PostMapping("/user/roomsDetails")
     public Room roomDetails(@RequestParam("id") int id){
-        return userService.roomDetails();
+        return userService.roomDetails(id);
     }
 
     @PostMapping("/user/bookRoom")
@@ -47,7 +47,7 @@ public class UserController {
     }
 
     @PostMapping("/user/bookings")
-    public Booking bookRoom(@RequestParam("id") int id){
+    public List<Booking> getBookings(@RequestParam("id") int id){
         return userService.userBookings(id);
     }
 

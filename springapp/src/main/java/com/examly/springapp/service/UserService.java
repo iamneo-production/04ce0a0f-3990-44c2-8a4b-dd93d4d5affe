@@ -4,6 +4,9 @@ import org.springframework.stereotype.Service;
 import com.examly.springapp.model.User;
 import com.examly.springapp.model.Admin;
 import com.examly.springapp.model.Room;
+import com.examly.springapp.model.Booking;
+import com.examly.springapp.model.BookingData;
+
 import com.examly.springapp.repository.AdminRepository;
 import com.examly.springapp.repository.UserRepository;
 import com.examly.springapp.repository.RoomRepository;
@@ -68,7 +71,7 @@ public class UserService {
     }
 
     public List<Booking> userBookings(int userId){
-        List<Booking> bookingList = bookingRepository.findByUserId(userId);
+        return bookingRepository.findByUserId(userId);
     }
 
     
