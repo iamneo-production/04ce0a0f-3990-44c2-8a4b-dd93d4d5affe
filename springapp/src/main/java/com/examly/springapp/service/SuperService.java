@@ -2,6 +2,7 @@ package com.examly.springapp.service;
 
 import com.examly.springapp.model.Login;
 import com.examly.springapp.repository.UserRepository;
+import com.examly.springapp.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
