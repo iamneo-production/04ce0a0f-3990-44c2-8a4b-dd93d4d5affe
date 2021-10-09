@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@NoArgsConstructor
+@Entity(name="Admin")
 public class Admin {
 
     @Id
@@ -32,4 +33,17 @@ public class Admin {
     String hotelAddress;
 
     int earnings;
+    @OneToMany(
+        cascade = CascadeType.ALL,
+        mappedBy="admin"
+    )
+    List<Room> rooms=new ArrayList<>();
+    @JsonManagedReference
+    public List<Room> getRooms(){
+        return rooms;
+    }
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
 }
