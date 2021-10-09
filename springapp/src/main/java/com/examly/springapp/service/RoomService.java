@@ -30,27 +30,14 @@ public class RoomService {
     }
 
     public Room editRoom(Room room){
-        Room ref = roomRepository.findById(room.getId()).get();
-        Admin admin = ref.getAdmin();
-        room.setAdmin(admin);
-        //roomRepository.setAdmin(room.getRoomNo(),room.getPrice(),room.getType(),id);
-        roomRepository.save(room);
-        return room;
+        return roomRepository.save(room);
     }
 
     public void deleteRoom(int id){
         roomRepository.deleteById(id);
     }
 
-    public void bookRoom(int id){
-        Room room = roomRepository.findById(id).get();
-        room.setStatus("BOOKED");
-        roomRepository.save(room);
-    }
-
     public List<Room> getRooms(String email){
-        Admin admin = adminRepository.findByEmail(email);
-        return roomRepository.findByAdminId(admin.getId());
+        return adminRepository.findByEmail(email).getRooms();
     }
-
 }
