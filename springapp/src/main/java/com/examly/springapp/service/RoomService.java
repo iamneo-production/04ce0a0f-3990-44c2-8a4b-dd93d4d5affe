@@ -23,11 +23,23 @@ public class RoomService {
     private AdminRepository adminRepository;
 
     public Room addRoom(Room room){
-        return roomRepository.save(room);
+        Admin admin=adminRepository.findById(id).get();
+        room.setAdmin(admin);
+        List<Room> rooms = admin.getRooms();
+        rooms.add(room);
+        admin.setRooms(rooms);
+        //roomRepository.save(room);
+        adminRepository.save(admin);
+        return room;
     }
 
     public Room editRoom(Room room){
-        return roomRepository.save(room);
+        Room ref = roomRepository.findById(room.getId()).get();
+        Admin admin = ref.getAdmin();
+        room.setAdmin(admin);
+        //roomRepository.setAdmin(room.getRoomNo(),room.getPrice(),room.getType(),id);
+        roomRepository.save(room);
+        return room;
     }
 
     public void deleteRoom(int id){
@@ -41,7 +53,8 @@ public class RoomService {
     }
 
     public List<Room> getRooms(String email){
-        return roomRepository.findByAdminId(adminRepository.findByEmail(email).getId());
+        Admin admin = adminRepository.findByEmail(email);
+        return roomRepository.findByAdminId(admin.getId());
     }
 
     

@@ -17,11 +17,26 @@ public class Room {
 
     String roomNo;
 
-    int adminId;
-
     String status = "AVAILABLE";
 
     String price;
 
     String type;
+    @ManyToOne(
+            cascade = CascadeType.PERSIST,fetch = FetchType.LAZY
+    )
+    @JoinColumn(
+            name="adminid",
+            nullable = false
+    )
+    @JsonBackReference
+    Admin admin;
+    public Admin getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
+    }
+
 }

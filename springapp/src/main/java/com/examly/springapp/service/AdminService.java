@@ -26,12 +26,17 @@ public class AdminService {
         return adminRepository.save(admin);
     }
 
-    public Admin getProfile(String admin_email_id){
-        return adminRepository.findByEmail(admin_email_id);
+    public Admin getProfile(int id)){
+        return adminRepository.findById(id).get();
     }
 
     public Admin getProfileById(int id){
         return adminRepository.findById(id).get();
+    }
+    public List<Admin> admins() {
+        List<Admin> adminss = new ArrayList<>();
+        adminRepository.findAll().forEach(topic-> adminss.add(topic));
+        return adminss;
     }
 
 

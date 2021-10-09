@@ -29,8 +29,8 @@ public class AdminController {
     }
 
     @PostMapping("/admin/profile")
-    public Admin getProfile(@RequestParam("email") String email){
-        return adminService.getProfile(email);
+    public Admin getProfile(@RequestParam("id") int id){
+        return adminService.getProfile(id);
     }
 
 }

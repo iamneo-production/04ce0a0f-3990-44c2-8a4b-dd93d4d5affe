@@ -22,8 +22,8 @@ public class RoomController {
     RoomService roomService;
 
     @PostMapping("/admin/addRoom")
-    public Room saveRoom(@RequestBody Room room){
-        return roomService.addRoom(room);
+    public Room saveRoom(@RequestBody Room room,@RequestParam Integer id ){
+        return roomService.addRoom(room,id);
     }
 
     @PostMapping("/admin/editRoom")

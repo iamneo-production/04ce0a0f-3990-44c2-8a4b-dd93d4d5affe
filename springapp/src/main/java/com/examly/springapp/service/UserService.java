@@ -53,20 +53,13 @@ public class UserService {
 
     }
 
-    public Booking userBookRoom(BookingData bookingData){
-        roomservice.bookRoom(bookingData.getRoomId());
-        Admin admin = adminRepository.findById(bookingData.getAdminId()).get();
-
-        Booking booking = new Booking();
-        booking.setUserId(bookingData.getUserId());
-        booking.setPrice(bookingData.getPrice());
-        booking.setRoomId(bookingData.getRoomId());
-        booking.setHotelName(admin.getHotelName()); 
-        booking.setHotelImageURL(admin.getHotelImageURL());
-        booking.setHotelAddress(admin.getHotelAddress());
-        booking.setAdminId(bookingData.getAdminId());
-
-        return bookingRepository.save(booking);
+    public Booking userBookRoom(Integer roomid,Integer userid){
+        Room obj=roomRepository.findById(roomid).get();
+        Booking booking = new Booking(userid,obj.getPrice(),roomid,obj.getAdmin().getHotelName(),obj.getAdmin().getHotelImageURL(),obj.getAdmin().getHotelAddress(),obj.getAdmin().getId());
+        obj.setStatus("BOOKED");
+        roomRepository.save(obj);
+        bookingRepository.save(booking);
+        return "Room Booked";
 
     }
 
