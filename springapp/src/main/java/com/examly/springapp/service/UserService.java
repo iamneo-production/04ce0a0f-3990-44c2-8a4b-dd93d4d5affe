@@ -43,7 +43,7 @@ public class UserService {
 
     public List<Room> hotelRooms(int id){
 
-        return roomRepository.findByAdminId(id);
+        return adminRepository.findById(id).get().getRooms();
 
     }
 
@@ -72,7 +72,5 @@ public class UserService {
     public List<Booking> userBookings(int userId){
         return bookingRepository.findByUserId(userId);
     }
-
-    
 
 }
