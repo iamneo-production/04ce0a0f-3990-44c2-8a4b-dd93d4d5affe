@@ -42,8 +42,8 @@ public class UserController {
     }
 
     @PostMapping("/user/bookRoom")
-    public Booking bookRoom(@RequestParam("roomid") int roomid,@RequestParam("userid") int userid){
-        return userService.userBookRoom(roomid,userid);
+    public Booking bookRoom(@RequestBody BookingData bookingData){
+        return userService.userBookRoom(bookingData);
     }
 
     @PostMapping("/user/bookings")

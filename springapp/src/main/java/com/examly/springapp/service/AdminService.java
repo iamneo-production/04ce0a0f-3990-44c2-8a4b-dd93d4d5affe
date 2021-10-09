@@ -26,7 +26,7 @@ public class AdminService {
         return adminRepository.save(admin);
     }
 
-    public Admin getProfile(int id)){
+    public Admin getProfile(int id){
         return adminRepository.findById(id).get();
     }
 
@@ -34,9 +34,7 @@ public class AdminService {
         return adminRepository.findById(id).get();
     }
     public List<Admin> admins() {
-        List<Admin> adminss = new ArrayList<>();
-        adminRepository.findAll().forEach(topic-> adminss.add(topic));
-        return adminss;
+        return (List<Admin>) adminRepository.findAll();
     }
 
 

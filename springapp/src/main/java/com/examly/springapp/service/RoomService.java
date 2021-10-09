@@ -3,10 +3,8 @@ package com.examly.springapp.service;
 import org.springframework.stereotype.Service;
 
 import com.examly.springapp.model.Admin;
-import com.examly.springapp.model.Login;
 import com.examly.springapp.model.Room;
 
-import com.examly.springapp.model.User;
 import com.examly.springapp.repository.RoomRepository;
 import com.examly.springapp.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,15 +20,13 @@ public class RoomService {
     @Autowired
     private AdminRepository adminRepository;
 
-    public Room addRoom(Room room){
+    public Room addRoom(Room room, int id){
+
         Admin admin=adminRepository.findById(id).get();
         room.setAdmin(admin);
-        List<Room> rooms = admin.getRooms();
-        rooms.add(room);
-        admin.setRooms(rooms);
-        //roomRepository.save(room);
+        admin.getRooms().add(room);
         adminRepository.save(admin);
-        return room;
+        return roomRepository.save(room);
     }
 
     public Room editRoom(Room room){
@@ -56,7 +52,5 @@ public class RoomService {
         Admin admin = adminRepository.findByEmail(email);
         return roomRepository.findByAdminId(admin.getId());
     }
-
-    
 
 }
