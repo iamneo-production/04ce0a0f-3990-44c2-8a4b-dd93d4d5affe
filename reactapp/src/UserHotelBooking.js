@@ -1,32 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './UserHotelBooking.css';
-function userHotelBooking(){
+function UserHotelBooking(){
+    const [bookings,setBookings]=useState([])
 
-    constructor(props){
+    useEffect(()=>{
+        const url='https://jsonplaceholder.typicode.com/posts';//api url
+        fetch(url).then(resp=>resp.json())//calling url by method GET
+        .then(resp=>setBookings(resp))//setting response to state posts
+      },[])
 
-        super(props);
+    // fetch('<API URL>')
+    // .then(res => res.json())
+    // .then(json => {
+    //     this.setState({
+    //         items: json,
+    //         isLoaded: true, 
+    //     })
+    // }).catch((err) => {
+    //     console.log(err);
+    // });
 
-        this.state = {
-            items: [],
-            isLoaded: false
-        }
+    // constructor(){
 
-    }
+    //     super(props);
 
-    componentDidMount() {
+    //     this.state = {
+    //         items: [],
+    //         isLoaded: false
+    //     }
 
-        fetch('<API URL>')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    items: json,
-                    isLoaded: true, 
-                })
-            }).catch((err) => {
-                console.log(err);
-            });
+    // }
 
-    }
+    // componentDidMount(){
+
+    
+
+    // }
 
     
     const bookingList=[
@@ -52,9 +61,6 @@ function userHotelBooking(){
             totalPrice: 1000
         }
     ];
-
-    const { isLoaded, items } = this.state;
-
     return(
         
         <div className="userBookingBody">
@@ -68,13 +74,13 @@ function userHotelBooking(){
                </tr>
            </table>                    
            <table className="tb" align="center">
-           {bookingList.map(booking => (
+           {bookings.map(booking => (
                 <tr className="tr_tb" cellSpacing="50">
-                        <td>{booking.hotelName}</td>
-                        <td>{booking.room}</td>
-                        <td>{booking.price}</td>
-                        <td>{booking.quantity}</td>
-                        <td>{booking.totalPrice}</td>
+                        <td>{booking.userId}</td>
+                        <td>{booking.id}</td>
+                        <td>{booking.title}</td>
+                        <td>{booking.id}</td>
+                        <td>{booking.body}</td>
                </tr>
             ))}
            </table>
@@ -82,4 +88,4 @@ function userHotelBooking(){
     );
 }
 
-export default userHotelBooking;
+export default UserHotelBooking;
