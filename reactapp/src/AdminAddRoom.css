@@ -1,0 +1,48 @@
+.rno,.rp,.rt{
+	font-size:20px;
+}
+.roomNo,.roomPrice,.roomType{
+    position:absolute;
+	display: inline-block;
+	margin:8px 0;
+	border: 55px solid #ccc;
+	box-sizing: border-box;
+	width: 25%;
+	padding-left:10%;
+	height: 40px;
+	padding: 7px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	border:none;
+	text-align:left;
+	color:black;
+	font-size:15px;
+}
+.addRoomButton{
+	text-align:"center";
+    height: 40px;
+	display:inline-block;
+	padding: 7px;
+	margin: 8px 0;
+	color: #fff;
+	font-size: 15px;
+	background: rgba(236, 52,52,255);
+	cursor: pointer;
+	border-radius: 10px;
+	border: none;
+	box-sizing:border-box; 
+	outline: none;
+	width: 235%;
+}
+.back{
+	cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+	font-size: 1em;
+}
+.t{
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
