@@ -7,6 +7,7 @@ import Editprofile from './EditProfile';
 import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
 import AdminEditRoom from './AdminEditRoom';
+import Hotel_Navbar from './UserNavbar';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
-      <Route path="/user/signup">          
-         
+      <Route path="/user/bookings">    
+        <Hotel_Navbar/>      
+        <UserHotelBooking />
       </Route>  
       <Route path="/login">          
          
@@ -40,8 +42,9 @@ function App() {
          
       </Route>
 
-      {/* Admin Routings */}
 
+
+      {/* Admin Routings */}
       <Route path="/admin/signup">          
          
       </Route> 

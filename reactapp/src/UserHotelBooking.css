@@ -12,6 +12,9 @@
 .tr1{
     background-color:rgba(236,52,52,255);
 }
+.tr_tb{
+    background-color:lightblue;
+}
 .tb{
     background-color: rgba(0,0,0,0.1);
     width:80%;
