@@ -72,8 +72,7 @@ function UserHotelBooking(){
                         <td>Quantity</td>
                         <td>Total Price</td>
                </tr>
-           </table>                    
-           <table className="tb" align="center">
+           
            {bookings.map(booking => (
                 <tr className="tr_tb" cellSpacing="50">
                         <td>{booking.userId}</td>

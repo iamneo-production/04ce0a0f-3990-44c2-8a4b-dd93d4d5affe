@@ -1,0 +1,17 @@
+.hotel-div{
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 8px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.outer-div{
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+}
