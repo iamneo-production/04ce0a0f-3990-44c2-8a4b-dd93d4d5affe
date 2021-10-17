@@ -45,7 +45,7 @@ function userHotelBooking(){
             totalPrice: 1000
         },
         {
-            hotelName: "jay",
+            hotelName: "ijay",
             roomNo: "502",
             price: 1000,
             quantity: 1,
@@ -71,7 +71,7 @@ function userHotelBooking(){
            {bookingList.map(booking => (
                 <tr className="tr_tb" cellSpacing="50">
                         <td>{booking.hotelName}</td>
-                        <td>{booking.room}</td>
+                        <td>{booking.roomNo}</td>
                         <td>{booking.price}</td>
                         <td>{booking.quantity}</td>
                         <td>{booking.totalPrice}</td>

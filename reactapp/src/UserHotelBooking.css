@@ -13,7 +13,8 @@
     background-color:rgba(236,52,52,255);
 }
 .tr_tb{
-    background-color:lightblue;
+    background-color:rgba(0,0,0,0);
+    color:black;
 }
 .tb{
     background-color: rgba(0,0,0,0.1);
