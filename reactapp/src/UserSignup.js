@@ -9,12 +9,13 @@ function UserSignup() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [mobileNumber,setMobileNumber]=useState("");
-    const [userRole,setUserRole]=useState("");
+    const [userRole,setUserRole]=useState("user");
     const [userName,setUserName]=useState("");
     const [age,setAge]=useState(0);
     const history = useHistory();
 
     function sendUserDetails(){
+        
         let data={email,password,mobileNumber,userRole,userName,age}
         console.log("data:",data);
 
@@ -45,9 +46,9 @@ function UserSignup() {
                 <input type="tel" name="phone" size="10" pattern="[1-9]{1}[0-9]{9}" placeholder="   Enter Mobile Number" id="mobilenumber" value={mobileNumber} onChange={(e)=>{setMobileNumber(e.target.value)}}/>
                 <br />
                 <br />
-                <select id="userrole" value={userRole} onChange={(e)=>{setUserRole(e.target.value)}}>
-                    <option value={userRole} onChange={(e)=>{setUserRole(e.target.value)}} >user</option>
-                    <option value={userRole} onChange={(e)=>{setUserRole(e.target.value)}}>admin</option>
+                <select id="userrole">
+                    <option value="user" >user</option>
+                    <option value="admin">admin</option>
                 </select>
                 <br />
                 <br />
