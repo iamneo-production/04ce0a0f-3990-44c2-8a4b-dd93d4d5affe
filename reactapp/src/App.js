@@ -11,6 +11,7 @@ import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
+import UserSignup from './UserSignup';
 import React from 'react'
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
+      <Route path="/user/signup">    
+        <Hotel_Navbar/>      
+        <UserSignup/>
+      </Route> 
       <Route path="/user/bookings">    
         <Hotel_Navbar/>      
         <UserHotelBooking />
