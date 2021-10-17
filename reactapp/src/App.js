@@ -10,8 +10,8 @@ import AdminBooking from './AdminBooking';
 import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
-import AdminSignup from './AdminSignup';
 import UserSignup from './UserSignup';
+import AdminSignup from './AdminSignup';
 import React from 'react'
 
 function App() {
@@ -55,7 +55,8 @@ function App() {
 
 
       {/* Admin Routings */}
-      <Route path="/admin/signup">          
+      <Route path="/admin/signup">           
+        <Hotel_Navbar/>      
         <AdminSignup/>
       </Route> 
       <Route path="/admin/profile/{adminId}">          
