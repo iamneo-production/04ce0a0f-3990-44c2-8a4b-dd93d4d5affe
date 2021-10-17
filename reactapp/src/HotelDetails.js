@@ -1,5 +1,5 @@
 import React from 'react';
-import IndividualStatus from '../individualStatus/individualStatus';
+import IndividualStatus from './IndividualStatus';
 import './hotelDetails.css';
 
 function hotelDetails(props) {

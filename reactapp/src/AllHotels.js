@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from '../../images/465709.jpg';
+import logo from './images/465709.jpg';
 import Grid from '@material-ui/core/Grid';
 import './allHotels.css';
-import history from '../../history/history';
 
 function allHotels(props) {
     const data = {
@@ -20,13 +19,10 @@ function allHotels(props) {
         sessionStorage.setItem('address',props.address);
         sessionStorage.setItem('number',props.number);
         sessionStorage.setItem('rooms',JSON.stringify(props.rooms));
-        history.push({
-        pathname: '/hotel',
-        data
-    });
+        history.push('/hotel');
     }
         return (
-            <div>
+            <div onClick={()=>{getDetails()}}>
                 <div className="main-div">
                 <Grid container spacing={1}>
                     <Grid item xs={4} sm={4} className="inner-div">

@@ -1,8 +1,8 @@
 import React from 'react';
-import AllHotels from '../allHotels/allHotels';
+import AllHotels from './AllHotels';
 import './userDashboard.css';
 
-function userDashboard(){
+function UserDashboard(){
     const hotelsList=[
         {
             image:"../../images/465709.jpg",
@@ -97,4 +97,4 @@ function userDashboard(){
     );
 }
 
-export default userDashboard;
+export default UserDashboard;
