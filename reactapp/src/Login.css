@@ -1,0 +1,128 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #fff;
+  }
+  
+  .loginbox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background: #ffffff;
+    margin: 100px auto 0;
+    word-break: break-all;
+    border: 1px solid rgba(255, 255, 255, 0.274);
+  }
+  
+  .bloc-tabs {
+    display: flex;
+    background:rgb(199,198,198);
+    
+    color: black;
+  }
+  .bloc-tabs button{
+  
+    color: black;
+    border: 0px;
+    box-shadow: 0px;
+  }
+  
+  .tabs {
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .userTabs  {
+    background:rgb(199,198,198);
+    border-bottom: 1px solid transparent;
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(88, 147, 241);
+  }
+  
+  .email{
+    justify-content: center;
+    top: 50%;
+    left: 50%;}
+  
+  button {
+    text-align:"center";
+      height: 40px;
+      display:inline-block;
+  
+      color: #fff;
+      font-size: 15px;
+      background: rgba(236, 52,52,255);
+      cursor: pointer;
+  
+      border: none;
+      box-sizing:border-box; 
+      outline: none;
+      width: 235%;
+  }
+  .content-tabs {
+    flex-grow : 1;
+    text-align: center;
+  
+  
+  }
+  .login input{
+      width: 100%;
+      border-radius: 10px;
+      background-color: #9e9d9d;
+      color: black;
+  }
+  .login ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  .content {
+    background:rgba(51, 49, 49, 0.274);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  
+    color: rgb(0, 0, 0);
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: block;
+  }

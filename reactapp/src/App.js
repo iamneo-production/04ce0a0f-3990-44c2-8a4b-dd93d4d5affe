@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import  { Redirect } from 'react-router-dom';
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
 import reportWebVitals from './reportWebVitals';
@@ -8,8 +9,12 @@ import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
 import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
+import Login from './Login';
+import AdminSignup from './AdminSignup';
+import React from 'react'
 
 function App() {
+  localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
   return (
     <Router>
     <div className="app">
@@ -21,7 +26,7 @@ function App() {
         <UserHotelBooking />
       </Route>  
       <Route path="/login">          
-         
+         <Login />
       </Route>
       <Route path="/user/dashboard">          
          
@@ -46,7 +51,7 @@ function App() {
 
       {/* Admin Routings */}
       <Route path="/admin/signup">          
-         
+        <AdminSignup/>
       </Route> 
       <Route path="/admin/profile/{adminId}">          
          
@@ -77,6 +82,9 @@ function App() {
       </Route>
       <Route path="/superadmin/adminBookings">          
          
+      </Route>
+      <Route path="/"> 
+        <Redirect to='/login'/>
       </Route>
       </Switch>
     </div>
