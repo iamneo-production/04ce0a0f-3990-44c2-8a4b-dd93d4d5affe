@@ -1,12 +1,45 @@
 import { useState } from "react";
+import axios from 'axios';
 import "./Login.css";
+import { useHistory } from 'react-router-dom';
 
 function Tabs() {
+  const baseURL = localStorage.getItem("baseURL");
+  const userSignup = baseURL+'/user/signup';
+  const adminSignup = baseURL+'/admin/signup';
   const [toggleState, setToggleState] = useState(1);
+  const history = useHistory();
+
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  function validateCredentials()
+  {
+    let data={email,password}
+    console.log("data:",data);
+
+    axios.post(baseURL+'/user/login', data)
+    .then(response => {if(response.data) history.push("/user/bookings")})
+    .catch(error => {
+        console.log('There was an error!', error);
+        alert("Please Enter Valid Email Address!");       
+    });
+  //   const requestOptions = {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body:JSON.stringify(data)
+  // };
+  // fetch(baseURL+"/user/login", requestOptions).then((resp)=>{
+  //     console.log("resp",resp);
+  //     resp.json().then((result)=>{
+  //       console.log("result",result)
+  //     })
+  //   })
+  }
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
 
   return (
     <div className="loginbox">
@@ -34,19 +67,19 @@ function Tabs() {
           <div class="login">
                 <div class="email" >
                     <br/>
-                    <input id='email' type="text"  placeholder="    Email"/>
+                    <input id='email' type="text"  placeholder="    Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
                 </div>
                 <br/>
                 <div class="password" >
-                    <input id='password' type="password" placeholder="    Password"/>
+                    <input id='password' type="password" placeholder="    Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 </div>
                 <br/>
                 <div class="form-row" >
-                    <button id='submitButton' class="btn" >Submit </button>
+                    <button id='submitButton' class="btn" onClick={validateCredentials}>Submit </button>
                 </div>
                 <br/>
                 <div class='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<a href="http://localhost:4200/login">Click Here</a></p>
+                    <p id='userSignupLink'>New to Booking?<a href={userSignup}>Click Here</a></p>
                 </div>  
             </div>
         </div>
@@ -68,11 +101,11 @@ function Tabs() {
                 </div>
                 <br/>
                 <div class="form-row" >
-                    <button id='submitButton' class="btn">Submit </button>
+                    <button id='submitButton' class="btn" onClick={validateCredentials}>Submit </button>
                 </div>
                 <br/>
                 <div class='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<a href="http://localhost:4200/login">Click Here</a></p>
+                    <p id='userSignupLink'>New to Booking?<a href={adminSignup}>Click Here</a></p>
                 </div>
             </div>
         </div>

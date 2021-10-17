@@ -14,6 +14,7 @@ import AdminSignup from './AdminSignup';
 import React from 'react'
 
 function App() {
+  localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
   return (
     <Router>
     <div className="app">
