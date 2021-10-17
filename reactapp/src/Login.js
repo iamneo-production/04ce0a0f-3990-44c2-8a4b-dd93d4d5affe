@@ -18,7 +18,10 @@ function Tabs() {
     console.log("data:",data);
 
     axios.post(baseURL+'/user/login', data)
-    .then(response => {if(response.data) history.push("/user/bookings")})
+    .then(response => {
+      if(response.data) history.push("/user/bookings")
+      else alert("Please Enter Correct Password!")
+    })
     .catch(error => {
         console.log('There was an error!', error);
         alert("Please Enter Valid Email Address!");       
