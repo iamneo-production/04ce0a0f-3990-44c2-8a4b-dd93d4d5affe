@@ -60,21 +60,19 @@ function userHotelBooking(){
         <div className="userBookingBody">
            <table className="ta" align="center">
                <tr className="tr1" cellSpacing="50">
-                        <td>Hotel Name</td>
-                        <td>Room No</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Total Price</td>
+                        <td className="t1" Style="border-top-left-radius:15px">Hotel Name</td>
+                        <td className="t2">Room No</td>
+                        <td className="t3">Price</td>
+                        <td className="t4">Quantity</td>
+                        <td className="t5" Style="border-top-right-radius:15px">Total Price</td>
                </tr>
-           </table>                    
-           <table className="tb" align="center">
            {bookingList.map(booking => (
                 <tr className="tr_tb" cellSpacing="50">
-                        <td>{booking.hotelName}</td>
-                        <td>{booking.roomNo}</td>
-                        <td>{booking.price}</td>
-                        <td>{booking.quantity}</td>
-                        <td>{booking.totalPrice}</td>
+                        <td className="td1">{booking.hotelName}</td>
+                        <td className="td2">{booking.roomNo}</td>
+                        <td className="td3">{booking.price}</td>
+                        <td className="td4">{booking.quantity}</td>
+                        <td className="td5">{booking.totalPrice}</td>
                </tr>
             ))}
            </table>
