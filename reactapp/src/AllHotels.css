@@ -1,0 +1,12 @@
+.main-div{
+    background-color: aliceblue;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 8px;
+}
+.inner-div{
+    position: relative;
+    display: flex;
+    left: 3%;
+}
