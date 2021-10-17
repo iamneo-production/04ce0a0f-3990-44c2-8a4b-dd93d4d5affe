@@ -1,6 +1,6 @@
 import React from 'react';
 import AllHotels from './AllHotels';
-import './userDashboard.css';
+import './UserDashboard.css';
 
 function UserDashboard(){
     const hotelsList=[

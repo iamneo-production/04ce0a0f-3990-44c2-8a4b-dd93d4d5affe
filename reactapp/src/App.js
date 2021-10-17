@@ -3,14 +3,12 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  { Redirect } from 'react-router-dom';
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
-import reportWebVitals from './reportWebVitals';
-import Editprofile from './EditProfile';
-import AdminProfileEdit from './AdminProfileEdit';
-import AdminBooking from './AdminBooking';
-import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
+import UserDashboard from './UserDashboard';
+import HotelDetails from './HotelDetails';
+import IndividualStatus from './IndividualStatus';
 import React from 'react'
 
 function App() {
@@ -29,13 +27,13 @@ function App() {
          <Login />
       </Route>
       <Route path="/user/dashboard">          
-         
+        <UserDashboard />  
       </Route> 
       <Route path="/user/hotelDetail/{hotelId}">          
-         
+        <HotelDetails/> 
       </Route>
       <Route path="/user/roomDetail/{roomId}">          
-         
+        <IndividualStatus />
       </Route>
       <Route path="/user/editProfile/{userId}">          
          
