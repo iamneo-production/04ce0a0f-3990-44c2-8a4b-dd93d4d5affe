@@ -29,10 +29,10 @@ function App() {
       <Route path="/user/dashboard">          
         <UserDashboard />  
       </Route> 
-      <Route path="/user/hotelDetail/{hotelId}">          
+      <Route path="/user/hotelDetail">          
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail/{roomId}">          
+      <Route path="/user/roomDetail">          
         <IndividualStatus />
       </Route>
       <Route path="/user/editProfile/{userId}">          

@@ -1,28 +1,48 @@
 import React from 'react';
-import IndividualStatus from './IndividualStatus';
-import './HotelDetails.css';
+// import logo from './images/465709.jpg';
+import { useHistory } from 'react-router-dom';
 
-function HotelDetails(props) {
-    const name=sessionStorage.getItem("name");
-    const address=sessionStorage.getItem("address");
-    const number=sessionStorage.getItem("number");
-    const rooms=JSON.parse(sessionStorage.getItem("rooms"))
+import Grid from '@material-ui/core/Grid';
+import './AllHotels.css';
+
+function AllHotels(props) {
+    const history = useHistory();
+    const data = {
+        image:props.image,
+        name:props.name,
+        address:props.address,
+        number:props.number,
+        rooms:props.rooms
+    }
+
+    function getDetails()
+    {
+        sessionStorage.setItem('image',props.image);
+        sessionStorage.setItem('name',props.name);
+        sessionStorage.setItem('address',props.address);
+        sessionStorage.setItem('number',props.number);
+        sessionStorage.setItem('rooms',JSON.stringify(props.rooms));
+        history.push('/user/hotelDetail');
+    }
         return (
-            <div className="outer-div" style={{border:"2px solid #ff6347",borderRadius:"5px"}}>
-                <div className="hotel-div">
-                    <p>{name}</p>
-                    <p>{address}</p>
-                    <p>{number}</p>
+            <div onClick={()=>{getDetails()}}>
+                <div className="main-div">
+                <Grid container spacing={1}>
+                    <Grid item xs={4} sm={4} className="inner-div">
+                        <img src="" alt="logo" style={{width:"40px", height:"40px",borderRadius:"40px" ,marginTop:"2%"}}/>
+                        <p style={{marginLeft:"5%"}}>{props.name}</p>
+                    </Grid>
+                    <Grid item xs={4} sm={4}>
+                        <p>{props.address}</p>
+                    </Grid>
+                    <Grid item xs={4} sm={4}>
+                        <p>{props.number}</p>
+                    </Grid>
+                </Grid>
                 </div>
-            {rooms.map(function (details) {
-                return(
-                    <IndividualStatus id={details.id} price={details.price} type={details.type} status={details.status}
-                    />
-                )
-            }
-            )}
+                <button onClick={()=>{getDetails()}}>click</button>
             </div>
         );
 }
 
-export default HotelDetails;
+export default AllHotels;
