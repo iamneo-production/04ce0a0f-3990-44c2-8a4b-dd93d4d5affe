@@ -12,7 +12,7 @@ function Tabs() {
 
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
-  function validateCredentials()
+  function validateUserCredentials()
   {
     let data={email,password}
     console.log("data:",data);
@@ -26,17 +26,24 @@ function Tabs() {
         console.log('There was an error!', error);
         alert("Please Enter Valid Email Address!");       
     });
-  //   const requestOptions = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body:JSON.stringify(data)
-  // };
-  // fetch(baseURL+"/user/login", requestOptions).then((resp)=>{
-  //     console.log("resp",resp);
-  //     resp.json().then((result)=>{
-  //       console.log("result",result)
-  //     })
-  //   })
+  
+  }
+
+  function validateAdminCredentials()
+  {
+    let data={email,password}
+    console.log("data:",data);
+
+    axios.post(baseURL+'/admin/login', data)
+    .then(response => {
+      if(response.data) history.push("/user/bookings")
+      else alert("Please Enter Correct Password!")
+    })
+    .catch(error => {
+        console.log('There was an error!', error);
+        alert("Please Enter Valid Email Address!");       
+    });
+  
   }
 
   const toggleTab = (index) => {
@@ -67,21 +74,21 @@ function Tabs() {
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
           <h2>USER LOGIN</h2>
-          <div class="login">
-                <div class="email" >
+          <div className="login">
+                <div className="email" >
                     <br/>
                     <input id='email' type="text"  placeholder="    Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
                 </div>
                 <br/>
-                <div class="password" >
+                <div className="password" >
                     <input id='password' type="password" placeholder="    Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 </div>
                 <br/>
-                <div class="form-row" >
-                    <button id='submitButton' class="btn" onClick={validateCredentials}>Submit </button>
+                <div className="form-row" >
+                    <button id='submitButton' className="btn" onClick={validateUserCredentials}>Submit </button>
                 </div>
                 <br/>
-                <div class='userSignupLink' >
+                <div className='userSignupLink' >
                     <p id='userSignupLink'>New to Booking?<a href={userSignup}>Click Here</a></p>
                 </div>  
             </div>
@@ -92,22 +99,22 @@ function Tabs() {
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
            <h2>ADMIN LOGIN</h2>         
-          <div class="login">
-                <div class="email" >
+          <div className="login">
+                <div className="email" >
                     {/* <label for="">Email</label> */}
                     <br/>
-                    <input id='email' type="text" placeholder="    Email"/>
+                    <input id='email' type="text" placeholder="    Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
                 </div>
                 <br/>
-                <div class="password" >
-                    <input id='password' type="password" placeholder="    Password"/>
+                <div className="password" >
+                    <input id='password' type="password" placeholder="    Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 </div>
                 <br/>
-                <div class="form-row" >
-                    <button id='submitButton' class="btn" onClick={validateCredentials}>Submit </button>
+                <div className="form-row" >
+                    <button id='submitButton' className="btn" onClick={validateAdminCredentials}>Submit </button>
                 </div>
                 <br/>
-                <div class='userSignupLink' >
+                <div className='userSignupLink' >
                     <p id='userSignupLink'>New to Booking?<a href={adminSignup}>Click Here</a></p>
                 </div>
             </div>
