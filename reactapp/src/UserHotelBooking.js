@@ -2,31 +2,31 @@ import React from 'react';
 import './UserHotelBooking.css';
 function userHotelBooking(){
 
-    constructor(props){
+    // constructor(props){
 
-        super(props);
+    //     super(props);
 
-        this.state = {
-            items: [],
-            isLoaded: false
-        }
+    //     this.state = {
+    //         items: [],
+    //         isLoaded: false
+    //     }
 
-    }
+    // }
 
-    componentDidMount() {
+    // componentDidMount() {
 
-        fetch('<API URL>')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    items: json,
-                    isLoaded: true, 
-                })
-            }).catch((err) => {
-                console.log(err);
-            });
+    //     fetch('<API URL>')
+    //         .then(res => res.json())
+    //         .then(json => {
+    //             this.setState({
+    //                 items: json,
+    //                 isLoaded: true, 
+    //             })
+    //         }).catch((err) => {
+    //             console.log(err);
+    //         });
 
-    }
+    // }
 
     
     const bookingList=[
@@ -53,7 +53,7 @@ function userHotelBooking(){
         }
     ];
 
-    const { isLoaded, items } = this.state;
+    // const { isLoaded, items } = this.state;
 
     return(
         
