@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  { Redirect } from 'react-router-dom';
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
-import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
 import UserSignup from './UserSignup';
@@ -11,9 +10,10 @@ import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
 import SuperAdminLogin from './SuperAdminLogin';
-import AdminEditRoom from './AdminEditRoom';
 import SuperNavbar from './SuperNavbar';
 import NavbarHome from './Navbar';
+import UserNavbar from './UserNavbar';
+
 import React from 'react'
 
 function App() {
@@ -31,24 +31,27 @@ function App() {
         <NavbarHome/>   
          <Login />
       </Route>
-      <Route path="/user/dashboard">          
+      <Route path="/user/dashboard">  
+        <UserNavbar/>        
         <UserDashboard />  
       </Route> 
       <Route path="/user/hotelDetail/:hotelId">          
+        <UserNavbar/> 
         <HotelDetails/> 
       </Route>
       <Route path="/user/roomDetail/:roomId">          
+        <UserNavbar/> 
         <IndividualStatus />
       </Route>
       <Route path="/user/editProfile/:userId">          
-         
+        <UserNavbar/> 
       </Route>
       <Route path="/user/bookings/:userId">          
-        <Hotel_Navbar/>      
+        <UserNavbar/>      
         <UserHotelBooking />
       </Route>
       <Route path="/user/profile/:userId">          
-         
+        <UserNavbar/> 
       </Route>
 
 

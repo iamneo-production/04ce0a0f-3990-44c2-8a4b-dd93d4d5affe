@@ -14,7 +14,7 @@ import UserBookingLink from './UserHotelBooking';
 import UserDashboardLink from './UserDashboard';
 import { useHistory } from 'react-router-dom';
 
-function Hotel_Navbar(){
+function UserNavbar(){
         const history = useHistory();
         function logout(){
             localStorage.clear();
@@ -54,4 +54,4 @@ function Hotel_Navbar(){
             </Router> */
         )
         }
-export default Hotel_Navbar
+export default UserNavbar

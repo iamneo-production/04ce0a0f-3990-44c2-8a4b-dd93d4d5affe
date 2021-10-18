@@ -40,8 +40,7 @@ function AllHotels(props) {
                         <p>{props.mobileNumber}</p>
                     </Grid>
                 </Grid>
-                </div>
-                <button onClick={()=>{getDetails()}}>click</button>
+                </div>  
             </div>
         );
 }
