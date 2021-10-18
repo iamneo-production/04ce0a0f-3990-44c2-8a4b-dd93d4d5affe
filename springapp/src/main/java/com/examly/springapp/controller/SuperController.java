@@ -3,8 +3,7 @@ package com.examly.springapp.controller;
 import com.examly.springapp.model.Login;
 import com.examly.springapp.service.SuperService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -14,7 +13,7 @@ public class SuperController {
     SuperService superService;
 
     @PostMapping("/super/login")
-    public Boolean validateAdmin(Login login){
+    public Boolean validateAdmin(@RequestBody Login login){
         return superService.validateSuperAdmin(login);
     }
 

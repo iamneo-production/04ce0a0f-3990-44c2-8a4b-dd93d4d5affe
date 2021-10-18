@@ -13,12 +13,14 @@ function SuperAdminLogin() {
 
     function validateAdminDetails(){
         
+        
         let data={email,password}
         console.log("data:",data);
 
         axios.post(baseURL+'/super/login', data)
         .then(response => {
-            history.push("/login");
+            if(response.data)history.push("/login");
+            else alert("Please Enter valid details");
         })
         .catch(error => {
             console.log('There was an error!', error);
@@ -38,10 +40,10 @@ function SuperAdminLogin() {
                 <br/><br/>
                 <table width="40%" cellSpacing="1">
                  <tr></tr>
-                 <tr><input className="roomNo" placeholder="Enter Super Admin Email" type="email" id="email" /><br/></tr>
-                 <tr><br/><br/><input className="roomPrice" placeholder="Enter Password" type="password" id="password" /><br/></tr>
+                 <tr><input className="roomNo" placeholder="Enter Super Admin Email" type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/></tr>
+                 <tr><br/><br/><input className="roomPrice" placeholder="Enter Password" type="password" id="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/></tr>
                  <br/><br/>
-                      <input className="editRoomButton"  type="button" value="Submit" id="submitButton"/>
+                      <input className="editRoomButton"  type="button" value="Submit" id="submitButton" onClick={validateAdminDetails}/>
                 </table>
              </table>
             </form>
