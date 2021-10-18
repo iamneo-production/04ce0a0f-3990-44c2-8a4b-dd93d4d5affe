@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
@@ -8,6 +8,7 @@ import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
 import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
+import adminAddRoom from './AdminAddRoom';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         <Hotel_Navbar/>      
         <UserHotelBooking />
       </Route>  
+      <Route path="/user/editProfile">          
+         <Hotel_Navbar/>
+         <Editprofile/>
+      </Route>
       <Route path="/login">          
          
       </Route>
@@ -45,6 +50,14 @@ function App() {
 
 
       {/* Admin Routings */}
+      <Route path="/admin/editRoom">          
+        <Hotel_Navbar/>
+        <AdminEditRoom/>
+      </Route>
+      <Route path="/admin/bookings">          
+         <Hotel_Navbar/>
+         <AdminBooking/>
+         </Route>
       <Route path="/admin/signup">          
          
       </Route> 
@@ -55,7 +68,8 @@ function App() {
          
       </Route>
       <Route path="/admin/addRoom">          
-         
+         <Hotel_Navbar/>
+         <adminAddRoom/>
       </Route>
       <Route path="/admin/editRoom/{roomId}">          
          
