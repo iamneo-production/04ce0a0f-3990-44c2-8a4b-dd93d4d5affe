@@ -40,7 +40,7 @@ function App() {
         <UserNavbar/> 
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail">          
+      <Route path="/user/roomDetail/:roomId">          
         <UserNavbar/> 
         <UserRoomDetails />
       </Route>

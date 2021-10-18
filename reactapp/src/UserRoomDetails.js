@@ -9,10 +9,26 @@ import {
 import './UserNavbar.css';
 import { useHistory } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import axios from 'axios';
 
-function UserRoomDetails(){
+function UserRoomDetails(props){
 
     const history = useHistory();
+    const baseURL = localStorage.getItem("baseURL");
+    const [room,setRoom]=useState();
+    useEffect(()=>{
+        console.log(props);
+        console.log(baseURL);
+        axios.post(baseURL+'/user/roomsDetails?id='+props.match.params.roomId)
+        .then(response => {
+            setRoom(response.data)
+        })
+        .catch(error => {
+            console.log('There was an error!', error);      
+        });
+      },[])
+
     function logout(){
         localStorage.clear();
         sessionStorage.clear();
@@ -51,7 +67,7 @@ function UserRoomDetails(){
                         <div class="v27_183"></div>
                     </div>
                 </div>
-                <div class="v27_194"><span class="v27_186">Room No    :  100</span><span class="v27_187">Price            :  $200 </span><span class="v27_188">Type            :  Single Cot </span><span class="v27_189">Description</span>
+                <div class="v27_194"><span class="v27_186">Room No    :  {room.roomNo}</span><span class="v27_187">Price            :  Rs. {room.price} </span><span class="v27_188">Type            :  {room.type} </span><span class="v27_189">Description</span>
                     <div class="v27_190"></div>
                 </div>
             </div>
@@ -61,4 +77,4 @@ function UserRoomDetails(){
     );
 }
 
-export default UserRoomDetails;
+export default withRouter(UserRoomDetails);
