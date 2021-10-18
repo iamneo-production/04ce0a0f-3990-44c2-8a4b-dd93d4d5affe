@@ -10,6 +10,10 @@ import UserSignup from './UserSignup';
 import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
+import SuperAdminLogin from './SuperAdminLogin';
+import AdminEditRoom from './AdminEditRoom';
+import SuperNavbar from './SuperNavbar';
+import NavbarHome from './Navbar';
 import React from 'react'
 
 function App() {
@@ -20,10 +24,11 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
-      <Route path="/user/signup">          
+      <Route path="/user/signup">     
         <UserSignup/>
       </Route> 
-      <Route path="/login">          
+      <Route path="/login">
+        <NavbarHome/>   
          <Login />
       </Route>
       <Route path="/user/dashboard">          
@@ -73,8 +78,9 @@ function App() {
 
 
       {/* SuperAdmin Routings */}
-      <Route path="/superadmin/login">          
-         
+      <Route path="/superadmin/login">
+         <SuperNavbar/>
+         <SuperAdminLogin/>
       </Route>
       <Route path="/superadmin/adminList">          
          
