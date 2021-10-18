@@ -23,10 +23,6 @@ function App() {
       <Route path="/user/signup">          
         <UserSignup/>
       </Route> 
-      {/* <Route path="/user/bookings">    
-        <Hotel_Navbar/>      
-        <UserHotelBooking />
-      </Route>   */}
       <Route path="/login">          
          <Login />
       </Route>
@@ -43,7 +39,8 @@ function App() {
          
       </Route>
       <Route path="/user/bookings/:userId">          
-         
+        <Hotel_Navbar/>      
+        <UserHotelBooking />
       </Route>
       <Route path="/user/profile/:userId">          
          
