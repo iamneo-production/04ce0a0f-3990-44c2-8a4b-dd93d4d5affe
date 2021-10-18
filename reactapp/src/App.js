@@ -6,6 +6,7 @@ import UserHotelBooking from './UserHotelBooking';
 import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
+import UserSignup from './UserSignup';
 import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
@@ -19,29 +20,32 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
-      <Route path="/user/bookings">    
+      <Route path="/user/signup">          
+        <UserSignup/>
+      </Route> 
+      {/* <Route path="/user/bookings">    
         <Hotel_Navbar/>      
         <UserHotelBooking />
-      </Route>  
+      </Route>   */}
       <Route path="/login">          
          <Login />
       </Route>
       <Route path="/user/dashboard">          
         <UserDashboard />  
       </Route> 
-      <Route path="/user/hotelDetail">          
+      <Route path="/user/hotelDetail/:hotelId">          
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail">          
+      <Route path="/user/roomDetail/:roomId">          
         <IndividualStatus />
       </Route>
-      <Route path="/user/editProfile/{userId}">          
+      <Route path="/user/editProfile/:userId">          
          
       </Route>
-      <Route path="/user/bookings/{userId}">          
+      <Route path="/user/bookings/:userId">          
          
       </Route>
-      <Route path="/user/profile/{userId}">          
+      <Route path="/user/profile/:userId">          
          
       </Route>
 
@@ -51,7 +55,7 @@ function App() {
       <Route path="/admin/signup">          
         <AdminSignup/>
       </Route> 
-      <Route path="/admin/profile/{adminId}">          
+      <Route path="/admin/profile/:adminId">          
          
       </Route>
       <Route path="/admin/dashboard">          
@@ -60,13 +64,13 @@ function App() {
       <Route path="/admin/addRoom">          
          
       </Route>
-      <Route path="/admin/editRoom/{roomId}">          
+      <Route path="/admin/editRoom/:roomId">          
          
       </Route>
-      <Route path="/admin/bookings/{adminId}">          
+      <Route path="/admin/bookings/:adminId">          
          
       </Route>
-      <Route path="/admin/editProfile/{adminId}">          
+      <Route path="/admin/editProfile/:adminId">          
          
       </Route>
 
