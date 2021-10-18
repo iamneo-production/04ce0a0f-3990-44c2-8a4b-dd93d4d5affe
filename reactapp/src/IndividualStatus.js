@@ -8,7 +8,7 @@ function IndividualStatus (props) {
             <div className="individual-div">
                 <Grid container spacing={1}>
                     <Grid item xs={3} sm={3} className="inner-div">
-                        <p>{props.id}</p>
+                        <p>{props.roomNo}</p>
                     </Grid>
                     <Grid item xs={3} sm={3}>
                         <p>{props.price}</p>
@@ -17,7 +17,7 @@ function IndividualStatus (props) {
                         <p>{props.type}</p>
                     </Grid>
                     <Grid item xs={3} sm={3}>
-                    {props.status==="Booked"?<p style={{color:'#8b0000'}}>{props.status}</p>:<p style={{color:'#0000ff'}}>{props.status}</p>}
+                    {props.status==="BOOKED"?<p style={{color:'#8b0000'}}>{props.status}</p>:<p style={{color:'#0000ff'}}>{props.status}</p>}
                     </Grid>
                 </Grid>
                 </div>

@@ -19,7 +19,7 @@ function Tabs() {
 
     axios.post(baseURL+'/user/login', data)
     .then(response => {
-      if(response.data) history.push("/user/bookings")
+      if(response.data) history.push("/user/dashboard")
       else alert("Please Enter Correct Password!")
     })
     .catch(error => {
@@ -36,7 +36,7 @@ function Tabs() {
 
     axios.post(baseURL+'/admin/login', data)
     .then(response => {
-      if(response.data) history.push("/user/bookings")
+      if(response.data) history.push("/admin/dashboard")
       else alert("Please Enter Correct Password!")
     })
     .catch(error => {
