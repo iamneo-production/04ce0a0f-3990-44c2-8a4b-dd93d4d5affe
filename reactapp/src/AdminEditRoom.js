@@ -1,6 +1,6 @@
 import React from 'react';
 import './AdminEditRoom.css';
-function adminEditRoom(){
+function AdminEditRoom(){
     return(
         <div className="editRoomBox">
             <form className="edit">
@@ -20,4 +20,4 @@ function adminEditRoom(){
 
 }
 
-export default adminEditRoom;
+export default AdminEditRoom;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import  { Redirect } from 'react-router-dom';
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,54 +9,41 @@ import {
 import { Navbar,Nav} from 'react-bootstrap';
 import Editprofile from './EditProfile';
 import './UserNavbar.css';
-import UserProfleLink from './UserHotelBooking';
+import UserProfleLink from './UserDashboard';
 import UserBookingLink from './UserHotelBooking';
-import UserDashboardLink from './UserHotelBooking';
+import UserDashboardLink from './UserDashboard';
+import { useHistory } from 'react-router-dom';
 
 function Hotel_Navbar(){
+        const history = useHistory();
+        function logout(){
+            localStorage.clear();
+            sessionStorage.clear();
+            history.push("/login");
+        }
         return (
-            <Router>
+            // <Router>
                 <div className="Navbar_Hotel">
-                
-
-                    <Navbar  variant={"dark"} expand="lg">
-                        <Navbar.Brand href="#">&nbsp;Rently-Rooms</Navbar.Brand>
-                        
-                        <Navbar.Toggle aria-controls="navbarScroll" />
-                        <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                                className="mr-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
-                                navbarScroll
-                            >
-                                
-                                <Nav.Link as={Link} to="/UserDashboardLink">Dashboard</Nav.Link>
-                                <Nav.Link as={Link} to="/UserProfleLink">Profile</Nav.Link>
-                                <Nav.Link as={Link} to="/UserBookingLink">MyBooking</Nav.Link>
-                                
-            
-                            </Nav>
-                            
-                        </Navbar.Collapse>  
-
-                        <a href='Login'> <button className="UserLogoutButton">Logout
-                        </button></a>
+                 <a href='#' className="title"><strong>Rental Rooms</strong></a>
+                                <Link to="/user/dashboard" className="dashboard">Dashboard</Link>
+                                <Link to="/user/profile" className="profile">Profile</Link>
+                                <Link to="/user/booking" className="mybooking">MyBooking</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>
+                            <br/>
    
         
-
-                    </Navbar>
                     
                 </div>
-                <div>
+                /* <div>
                     <Switch>
-                    <Route path="/UserDashboardLink">
-                            <UserDashboardLink />
+                    <Route path="/user/dashboard">
+                        <Redirect to='/user/dashboard'/>
                             </Route>
-                    <Route path="/UserProfleLink">
-                            <UserProfleLink />
+                    <Route path="/user/profile">
+                        <Redirect to='/user/profile'/>
                             </Route>
-                    <Route path="/UserBookingLink">
-                            <UserBookingLink />
+                    <Route path="/user/bookings">
+                        <Redirect to='/user/bookings'/>
                             </Route>
                     <Route path="/Editprofile">
                             <Editprofile />
@@ -63,7 +51,7 @@ function Hotel_Navbar(){
                         
                     </Switch>
                 </div>
-            </Router>
+            </Router> */
         )
         }
 export default Hotel_Navbar

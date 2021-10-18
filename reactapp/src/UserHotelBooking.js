@@ -1,12 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import './UserHotelBooking.css';
-function UserHotelBooking(){
-    const [bookings,setBookings]=useState([])
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
+
+function UserHotelBooking(props){
+    const [bookings,setBookings]=useState([]);
+    const baseURL = localStorage.getItem("baseURL");
 
     useEffect(()=>{
-        const url='https://jsonplaceholder.typicode.com/posts';//api url
-        fetch(url).then(resp=>resp.json())//calling url by method GET
-        .then(resp=>setBookings(resp))//setting response to state posts
+        axios.post(baseURL+'/user/bookings/'+props.match.params.id)
+        .then(response => {
+            setBookings(response.data)
+        })
+        .catch(error => {
+            console.log('There was an error!', error);      
+        });
       },[])
 
     // fetch('<API URL>')
@@ -87,4 +95,4 @@ function UserHotelBooking(){
     );
 }
 
-export default UserHotelBooking;
+export default withRouter(UserHotelBooking);

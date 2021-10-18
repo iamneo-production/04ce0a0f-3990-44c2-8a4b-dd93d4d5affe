@@ -1,13 +1,44 @@
 .Navbar_Hotel
 {
        background-color:rgba(236,52,52,255);
-       font-size:4.5mm;
-     
+       font-size:4.0mm;
+       height:2.5em;
 }
 .UserLogoutButton
 {
-    margin-right: 25px;
-    color: lightcyan;
+    background-color:rgba(236,52,52,255);
     border:rgba(236,52,52,255);
-    background-color:rgba(236,52,52,255);   
+    color:white;
+    text-decoration:none;  
+    float:right;
+    margin: 8px;
+    margin-right:18px;
 }
+.UserLogoutButton:hover{
+    /* background-color:rgb(189, 179, 181); */
+    border-radius: 25%;
+    color:rgb(200, 199, 199);
+    text-decoration:none;  
+    float:right;
+    margin: 8px;
+    margin-right:18px;
+    cursor: pointer;
+}
+
+.title{
+    background-color:rgba(236,52,52,255);
+    border:rgba(236,52,52,255);
+    color:white;
+    text-decoration:none;
+    font-size:1.5em;
+    margin-top:20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.dashboard,.profile,.mybooking{
+    background-color:rgba(236,52,52,255);
+    border:rgba(236,52,52,255);
+    color:white;
+    text-decoration:none;
+    margin: 8px;
+}  

@@ -24,8 +24,6 @@ public class RoomService {
 
         Admin admin=adminRepository.findById(id).get();
         room.setAdmin(admin);
-        admin.getRooms().add(room);
-        adminRepository.save(admin);
         return roomRepository.save(room);
     }
 

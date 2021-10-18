@@ -6,9 +6,14 @@ import UserHotelBooking from './UserHotelBooking';
 import Hotel_Navbar from './UserNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
+import UserSignup from './UserSignup';
 import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
+import SuperAdminLogin from './SuperAdminLogin';
+import AdminEditRoom from './AdminEditRoom';
+import SuperNavbar from './SuperNavbar';
+import NavbarHome from './Navbar';
 import React from 'react'
 
 function App() {
@@ -19,29 +24,30 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
-      <Route path="/user/bookings">    
-        <Hotel_Navbar/>      
-        <UserHotelBooking />
-      </Route>  
-      <Route path="/login">          
+      <Route path="/user/signup">     
+        <UserSignup/>
+      </Route> 
+      <Route path="/login">
+        <NavbarHome/>   
          <Login />
       </Route>
       <Route path="/user/dashboard">          
         <UserDashboard />  
       </Route> 
-      <Route path="/user/hotelDetail">          
+      <Route path="/user/hotelDetail/:hotelId">          
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail">          
+      <Route path="/user/roomDetail/:roomId">          
         <IndividualStatus />
       </Route>
-      <Route path="/user/editProfile/{userId}">          
+      <Route path="/user/editProfile/:userId">          
          
       </Route>
-      <Route path="/user/bookings/{userId}">          
-         
+      <Route path="/user/bookings/:userId">          
+        <Hotel_Navbar/>      
+        <UserHotelBooking />
       </Route>
-      <Route path="/user/profile/{userId}">          
+      <Route path="/user/profile/:userId">          
          
       </Route>
 
@@ -51,7 +57,7 @@ function App() {
       <Route path="/admin/signup">          
         <AdminSignup/>
       </Route> 
-      <Route path="/admin/profile/{adminId}">          
+      <Route path="/admin/profile/:adminId">          
          
       </Route>
       <Route path="/admin/dashboard">          
@@ -60,20 +66,21 @@ function App() {
       <Route path="/admin/addRoom">          
          
       </Route>
-      <Route path="/admin/editRoom/{roomId}">          
+      <Route path="/admin/editRoom/:roomId">          
          
       </Route>
-      <Route path="/admin/bookings/{adminId}">          
+      <Route path="/admin/bookings/:adminId">          
          
       </Route>
-      <Route path="/admin/editProfile/{adminId}">          
+      <Route path="/admin/editProfile/:adminId">          
          
       </Route>
 
 
       {/* SuperAdmin Routings */}
-      <Route path="/superadmin/login">          
-         
+      <Route path="/superadmin/login">
+         <SuperNavbar/>
+         <SuperAdminLogin/>
       </Route>
       <Route path="/superadmin/adminList">          
          
