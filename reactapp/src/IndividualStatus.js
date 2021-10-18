@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import './individualStatus.css';
+import './IndividualStatus.css';
 
-function individualStatus (props) {
+function IndividualStatus (props) {
     return (
         <div>
             <div className="individual-div">
@@ -25,4 +25,4 @@ function individualStatus (props) {
     );
 }
 
-export default individualStatus;
+export default IndividualStatus;

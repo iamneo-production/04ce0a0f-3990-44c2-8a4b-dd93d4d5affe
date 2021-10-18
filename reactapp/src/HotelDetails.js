@@ -1,8 +1,8 @@
 import React from 'react';
-import IndividualStatus from '../individualStatus/individualStatus';
-import './hotelDetails.css';
+import IndividualStatus from './IndividualStatus';
+import './HotelDetails.css';
 
-function hotelDetails(props) {
+function HotelDetails(props) {
     const name=sessionStorage.getItem("name");
     const address=sessionStorage.getItem("address");
     const number=sessionStorage.getItem("number");
@@ -25,4 +25,4 @@ function hotelDetails(props) {
         );
 }
 
-export default hotelDetails;
+export default HotelDetails;

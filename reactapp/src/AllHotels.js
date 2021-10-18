@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from '../../images/465709.jpg';
-import Grid from '@material-ui/core/Grid';
-import './allHotels.css';
-import history from '../../history/history';
+// import logo from './images/465709.jpg';
+import { useHistory } from 'react-router-dom';
 
-function allHotels(props) {
+import Grid from '@material-ui/core/Grid';
+import './AllHotels.css';
+
+function AllHotels(props) {
+    const history = useHistory();
     const data = {
         image:props.image,
         name:props.name,
@@ -20,17 +22,14 @@ function allHotels(props) {
         sessionStorage.setItem('address',props.address);
         sessionStorage.setItem('number',props.number);
         sessionStorage.setItem('rooms',JSON.stringify(props.rooms));
-        history.push({
-        pathname: '/hotel',
-        data
-    });
+        history.push('/user/hotelDetail');
     }
         return (
-            <div>
+            <div onClick={()=>{getDetails()}}>
                 <div className="main-div">
                 <Grid container spacing={1}>
                     <Grid item xs={4} sm={4} className="inner-div">
-                        <img src={logo} alt="logo" style={{width:"40px", height:"40px",borderRadius:"40px" ,marginTop:"2%"}}/>
+                        <img src="" alt="logo" style={{width:"40px", height:"40px",borderRadius:"40px" ,marginTop:"2%"}}/>
                         <p style={{marginLeft:"5%"}}>{props.name}</p>
                     </Grid>
                     <Grid item xs={4} sm={4}>
@@ -46,4 +45,4 @@ function allHotels(props) {
         );
 }
 
-export default allHotels;
+export default AllHotels;
