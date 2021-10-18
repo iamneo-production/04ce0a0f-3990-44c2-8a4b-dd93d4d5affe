@@ -54,14 +54,14 @@ function Tabs() {
   return (
     <div className="loginbox">
       <div className="bloc-tabs">
-        <button
-          className={toggleState === 1 ? "tabs userTabs" : "tabs"}
+      <button
+          className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
          USER
         </button>
         <button
-          className={toggleState === 2 ? "tabs userTabs" : "tabs"}
+          className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
         ADMIN
@@ -73,16 +73,18 @@ function Tabs() {
             id='userTab' 
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <h2>USER LOGIN</h2>
+          <h2> LOGIN</h2>
           <div className="login">
-                <div className="email" >
                     <br/>
-                    <input id='email' type="text"  placeholder="    Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-                </div>
+                    <br/>
+                    <input id='email' type="text"  placeholder="  Enter Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+              
                 <br/>
-                <div className="password" >
-                    <input id='password' type="password" placeholder="    Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
-                </div>
+                <br/>
+                <br/>
+                    <input id='password' type="password" placeholder="  Enter Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+            
+                <br/>
                 <br/>
                 <div className="form-row" >
                     <button id='submitButton' className="btn" onClick={validateUserCredentials}>Submit </button>
@@ -98,17 +100,18 @@ function Tabs() {
         id='adminTab' 
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-           <h2>ADMIN LOGIN</h2>         
+           <h2>LOGIN</h2>         
           <div className="login">
-                <div className="email" >
-                    {/* <label for="">Email</label> */}
-                    <br/>
-                    <input id='email' type="text" placeholder="    Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-                </div>
+          <br/>
+          <br/>
+                    <input id='email' type="text" placeholder="  Enter Email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+  
                 <br/>
-                <div className="password" >
-                    <input id='password' type="password" placeholder="    Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
-                </div>
+                <br/>
+                <br/>
+                    <input id='password' type="password" placeholder="  Enter Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+          
+                <br/>
                 <br/>
                 <div className="form-row" >
                     <button id='submitButton' className="btn" onClick={validateAdminCredentials}>Submit </button>

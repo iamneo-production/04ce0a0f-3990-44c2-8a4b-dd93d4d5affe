@@ -6,6 +6,7 @@
   
   body {
     background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .loginbox {
@@ -17,27 +18,18 @@
     background: #ffffff;
     margin: 100px auto 0;
     word-break: break-all;
-    border: 1px solid rgba(255, 255, 255, 0.274);
   }
   
   .bloc-tabs {
     display: flex;
-    background:rgb(199,198,198);
-    
-    color: black;
   }
-  .bloc-tabs button{
   
-    color: black;
-    border: 0px;
-    box-shadow: 0px;
-  }
   
   .tabs {
     padding: 15px;
     text-align: center;
     width: 50%;
-    background: rgb(255, 255, 255);
+    background:#fff;
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.274);
     box-sizing: content-box;
@@ -48,9 +40,10 @@
     border-right: 1px solid rgba(0, 0, 0, 0.274);
   }
   
-  .userTabs  {
-    background:rgb(199,198,198);
+  .tabs.active-tabs  {
+    background: #e2e2e2;
     border-bottom: 1px solid transparent;
+    
   }
   
   .active-tabs::before {
@@ -62,47 +55,67 @@
     transform: translateX(-50%);
     width: calc(100% + 2px);
     height: 5px;
-    background: rgb(88, 147, 241);
+    background:  white;
+    
   }
   
-  .email{
-    justify-content: center;
-    top: 50%;
-    left: 50%;}
   
-  button {
+  
+ .bloc-tabs button {
     text-align:"center";
       height: 40px;
       display:inline-block;
-  
-      color: #fff;
+      color:black;
       font-size: 15px;
       background: rgba(236, 52,52,255);
+      background-color: rgb(243, 236, 236);
       cursor: pointer;
-  
       border: none;
       box-sizing:border-box; 
       outline: none;
+      border: 0px;
+      box-shadow: 0px;
       width: 235%;
   }
   .content-tabs {
     flex-grow : 1;
     text-align: center;
-  
-  
+    background-color:#eeebeb;
+  }
+  .btn{
+    text-align:"center";
+    height: 40px;
+	display:inline-block;
+
+	color: #fff;
+	font-size: 15px;
+	background: rgba(236, 52,52,255);
+	cursor: pointer;
+	border: none;
+	box-sizing:border-box; 
+	outline: none;
+	width: 50%;
+	margin:0 25% 0 25%;
+	border-radius:4px;
   }
   .login input{
-      width: 100%;
-      border-radius: 10px;
-      background-color: #9e9d9d;
-      color: black;
+    width: 90%;
+    border-radius: 5px;
+	border: 1px solid rgb(209, 204, 204);
+    background-color: #b9b9b9;
+	  margin-left:5%;
+	  margin-right:5%;
+	padding:1em 0 1em 0;
+	box-sizing:border-box;
+     
   }
   .login ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     opacity: 1; /* Firefox */
   }
   .content {
-    background:rgba(51, 49, 49, 0.274);
+   
+    background-color:  #e2e2e2;
     padding: 20px;
     width: 100%;
     height: 100%;

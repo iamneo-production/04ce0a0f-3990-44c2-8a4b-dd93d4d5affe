@@ -24,7 +24,7 @@ function App() {
         <UserHotelBooking />
       </Route>  
       <Route path="/login">          
-         <Login />
+         <Login />cd 
       </Route>
       <Route path="/user/dashboard">          
         <UserDashboard />  
