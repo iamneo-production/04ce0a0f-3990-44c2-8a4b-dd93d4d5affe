@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .v27_137 {
+    width: 100%;
+    height: 800px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v27_193 {
+    width: 190px;
+    height: 44px;
+    /* background: url("../images/v27_193.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 567px;
+    left: 652px;
+    overflow: hidden;
+  }
+  .v27_191 {
+    width: 190px;
+    height: 44px;
+    background: rgba(10,151,10,0.8500000238418579);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+  }
+  .v27_192 {
+    width: 146px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_138 {
+    width: 100%;
+    height: 60px;
+    /* background: url("../images/v27_138.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v27_139 {
+    width: 100%;
+    height: 60px;
+    background: rgba(235,52,52,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v27_140 {
+    width: 139px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-family: Rakkas;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_141 {
+    width: 30px;
+    height: 60px;
+    /* background: url("../images/v27_141.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+  }
+  .v27_142 {
+    width: 30px;
+    height: 60px;
+    /* background: url("../images/v27_142.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 169px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+  }
+  .v27_143 {
+    width: 66px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 17px;
+    left: 1344px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_144 {
+    width: 321px;
+    height: 26px;
+    /* background: url("../images/v27_144.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 17px;
+    left: 199px;
+    overflow: hidden;
+  }
+  .v27_145 {
+    width: 97px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_146 {
+    width: 58px;
+    color: rgba(255,255,255,0.699999988079071);
+    position: absolute;
+    top: 0px;
+    left: 127px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_147 {
+    width: 106px;
+    color: rgba(255,255,255,0.699999988079071);
+    position: absolute;
+    top: 0px;
+    left: 215px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_185 {
+    width: 365px;
+    height: 499px;
+    /* background: url("../images/v27_185.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 125px;
+    left: 89px;
+    overflow: hidden;
+  }
+  .v27_171 {
+    width: 364px;
+    height: 304px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+  }
+  .v27_184 {
+    width: 365px;
+    height: 171px;
+    /* background: url("../images/v27_184.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 327px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v27_172 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_180 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 97px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_173 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 95px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_181 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 97px;
+    left: 95px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_178 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_182 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 97px;
+    left: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_179 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 285px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_183 {
+    width: 79px;
+    height: 73px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 97px;
+    left: 285px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+  .v27_194 {
+    width: 373px;
+    height: 355px;
+    /* background: url("../images/v27_194.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 181px;
+    left: 561px;
+    overflow: hidden;
+  }
+  .v27_186 {
+    width: 218px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_187 {
+    width: 231px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 57px;
+    left: 0px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_188 {
+    width: 342px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 115px;
+    left: 0px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_189 {
+    width: 332px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 173px;
+    left: 0px;
+    font-family: Red Hat Text;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v27_190 {
+    width: 373px;
+    height: 125px;
+    background: rgba(242,242,242,1);
+    opacity: 1;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+  }
+  

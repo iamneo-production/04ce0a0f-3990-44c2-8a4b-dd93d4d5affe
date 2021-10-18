@@ -12,6 +12,7 @@ import IndividualStatus from './IndividualStatus';
 import SuperAdminLogin from './SuperAdminLogin';
 import SuperNavbar from './SuperNavbar';
 import NavbarHome from './Navbar';
+import UserRoomDetails from './UserRoomDetails';
 import UserNavbar from './UserNavbar';
 
 import React from 'react'
@@ -39,9 +40,9 @@ function App() {
         <UserNavbar/> 
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail/:roomId">          
+      <Route path="/user/roomDetail">          
         <UserNavbar/> 
-        <IndividualStatus />
+        <UserRoomDetails />
       </Route>
       <Route path="/user/editProfile/:userId">          
         <UserNavbar/> 

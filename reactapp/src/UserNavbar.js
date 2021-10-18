@@ -6,12 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import { Navbar,Nav} from 'react-bootstrap';
-import Editprofile from './EditProfile';
 import './UserNavbar.css';
-import UserProfleLink from './UserDashboard';
-import UserBookingLink from './UserHotelBooking';
-import UserDashboardLink from './UserDashboard';
 import { useHistory } from 'react-router-dom';
 
 function UserNavbar(){
@@ -23,15 +18,12 @@ function UserNavbar(){
         }
         return (
             // <Router>
-                <div className="Navbar_Hotel">
+                <div className="Navbar_Hotel" id="userNavbar">
                  <a href='#' className="title"><strong>Rental Rooms</strong></a>
                                 <Link to="/user/dashboard" className="dashboard">Dashboard</Link>
                                 <Link to="/user/profile" className="profile">Profile</Link>
                                 <Link to="/user/booking" className="mybooking">MyBooking</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>
-                            <br/>
-   
-        
+                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>
