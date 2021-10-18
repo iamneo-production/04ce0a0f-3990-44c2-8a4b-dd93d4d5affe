@@ -1,14 +1,22 @@
 .card input{
-	width: 100%;
-    border-radius: 10px;
-    background-color: #9e9d9d;
+	width: 90%;
+    border-radius: 5px;
+	border: 1px solid #000;
+    background-color: #c3c3a2;
+	  margin-left:5%;
+	  margin-right:5%;
     color: black;
+	padding:0.5em 0 0.5em 0;
+	box-sizing:border-box;
 }
 .card select{
-	width: 100%;
-    border-radius: 10px;
-    background-color: #9e9d9d;
-    color: black;
+	margin-left:5%;
+	margin-right:5%;
+	border-radius:5px;
+	border: 1px solid #000;
+	padding:0.5em 0 0.5em 0;
+	background-color: #c3c3a2;
+	box-sizing:border-box;
 }
 .card ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
@@ -20,9 +28,10 @@
   position: relative;
   width: 500px;
   height: 200%;
-  background: #86858549;
+  background: #f5f5ef;
   margin: 110px auto 0;
   word-break: break-all;
+	border-radius:2%;
   border: 1px solid rgba(0, 0, 0, 0.274);
 }
 .card button{
@@ -34,16 +43,18 @@
 	font-size: 15px;
 	background: rgba(236, 52,52,255);
 	cursor: pointer;
-
 	border: none;
 	box-sizing:border-box; 
 	outline: none;
-	width: 100%;
-}
-#userrole{
-	width: 500px;
+	width: 50%;
+	margin:0 25% 0 25%;
+	border-radius:4px;
 }
 h2{
 	color: black;
 	font: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+small{
+	font-family: Arial, Helvetica, sans-serif;
 }
