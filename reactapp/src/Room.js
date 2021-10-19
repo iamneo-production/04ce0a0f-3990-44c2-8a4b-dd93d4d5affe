@@ -5,6 +5,8 @@ function Room(props){
     const history = useHistory();
     function editClicked(){
         console.log("edit");
+        localStorage.setItem("adminId",props.adminId);
+        console.log(localStorage.getItem("adminId"));
         history.push('/admin/editRoom/'+props.room.id)
     }
     function deleteClicked(){

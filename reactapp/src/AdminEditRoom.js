@@ -11,18 +11,20 @@ function AdminEditRoom(props){
     const [price,setPrice]=useState("");
     const [type,setType]=useState("");
     const baseURL = localStorage.getItem("baseURL");
+    const [admin,setAdmin] = useState("");
     const history = useHistory();
     // onChange={(e)=>{setEmail(e.target.value)}}
 
     useEffect(()=>{
-        console.log(props);
+        setAdmin(localStorage.getItem("adminId"));
+        
         axios.get(baseURL+'/admin/getroom?id='+props.match.params.roomId)
         .then(response => {
             setRoom(response.data);
             setPrice(response.data.price);
             setRoomNo(response.data.roomNo);
             setType(response.data.type);
-            
+            console.log(localStorage.getItem("adminId"));
         })
         .catch(error => {
             console.log('There was an error!', error);      
@@ -33,7 +35,9 @@ function AdminEditRoom(props){
         history.push('/admin/dashboard')
     }
     function saveChanges(){
-        let data = {"id":props.match.params.roomId, "roomNo":roomNo,"type":type, "price":price};
+        let adminId = {"id":localStorage.getItem("adminId")};
+        let data = {"admin":adminId, "id":props.match.params.roomId, "roomNo":roomNo,"type":type, "price":price};
+        console.log(data);
         axios.post(baseURL+'/admin/editRoom',data)
         .then(response => {
             console.log(response.data);

@@ -12,9 +12,10 @@ function AdminDash(){
     useEffect(()=>{
         axios.get(baseURL+'/admin/dashboard?email='+email)
         .then(response => {
-            console.log(response)
-            setAdmin(response.data)
-            setRooms(response.data.rooms)
+            console.log(response);
+            setAdmin(response.data);
+            localStorage.setItem("adminId",response.data.id);
+            setRooms(response.data.rooms);
         })
         .catch(error => {
             console.log('There was an error!', error);      
@@ -44,7 +45,7 @@ function AdminDash(){
                     <br/>
                     {rooms.map(function (room) {
                         return(
-                            <Room room={room} id={room.id}
+                            <Room room={room} id={room.id} adminId={admin.id}
                             />
                         )
                     }
