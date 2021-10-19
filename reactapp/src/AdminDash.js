@@ -38,7 +38,7 @@ function AdminDash(){
             <body>
                 <AdminNavbar/>
                 <center><h1 class="hotelName">Hotel Name</h1></center>
-                <div class="container">
+                <div class="container-outer">
                 
                 <div class="room">
                     <br/>
@@ -50,20 +50,30 @@ function AdminDash(){
                     }
                     )}
                 </div>
-                <div class="v6_4" id="adminDashboard">
-                    <div class="v6_18"></div><span class="v6_19">200</span><span class="v6_20">300</span><span class="v6_21">Total Today</span><span class="v6_22">Monthly</span><span class="v6_23">Earnings</span>
-                    
-                    <div class="v6_90"></div><span class="v15_1">Want to add a New Room</span>
-                    <div class="v20_151">
-                        <div class="v15_2" id="addRoomButton"></div>
-                        <div class="v24_92"><span class="v15_0">Add Room</span>
-                            
-                        </div>
+                <div class="outer">
+                     <br/><br/><br/><br/><br/><br/>
+                    <center>
+                    <div class="add-container">
+                        <center>
+                        <br/>
+                        <p class="add-text">Want to add a New Room?</p><br/>
+                        <button class="add-button" >+ Add Room</button>
+                        </center>
+                    </div><br/><br/><br/>
+                    <div class="container">
+                        <center>
+                            <br/>
+                        <h3 class="earning-text">Earnings</h3><br/><br/>
+                        <h4 class="total-today">Total Today</h4>
+                        <p class="total" >$200</p>
+                        <p >________________</p>
+                        <h4 class="monthly-text">Monthly</h4>
+                        <p class="monthly">$500</p>
+                        </center>
                     </div>
-                    <div class="name"></div>
-                
+                    </center>
                 </div>
-                </div>
+            </div>    
             </body>
 
             </html>
