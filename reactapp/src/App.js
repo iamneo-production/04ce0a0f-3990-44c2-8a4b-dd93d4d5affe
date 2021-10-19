@@ -20,6 +20,7 @@ import AdminDash from './AdminDash';
 import AdminEditRoom from './AdminEditRoom';
 import AdminAddRoom from './AdminAddRoom';
 import AdminNavbar from './AdminNavbar';
+import AdminProfileEdit from './AdminProfileEdit';
 import React from 'react'
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
       </Route>
       <Route path="/admin/editProfile/:adminId">          
         <AdminNavbar/> 
+        <AdminProfileEdit/>
       </Route>
 
 
