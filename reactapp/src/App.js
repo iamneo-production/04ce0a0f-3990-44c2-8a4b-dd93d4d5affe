@@ -12,6 +12,7 @@ import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
 import AdminDashboard from './AdminDashboard';
 import AdminProfile from './AdminProfile';
+import Editprofile from './EditProfile';
 import adminprofileEdit from './AdminProfileEdit';
 import Room from './Room';
 import React from 'react';
@@ -55,6 +56,10 @@ function App() {
       </Route>
       <Route path="/user/profile/{userId}">          
          
+      </Route>
+      <Route path="/user/editProfile">
+      
+         <Editprofile/>
       </Route>
 
 
@@ -100,7 +105,7 @@ function App() {
          <AdminProfile/>
       </Route>
       <Route path="/"> 
-        <Redirect to='/superadmin/login'/>
+        <Redirect to='/user/editProfile'/>
       </Route>
       </Switch>
     </div>

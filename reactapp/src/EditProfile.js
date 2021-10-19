@@ -2,22 +2,30 @@ import React from 'react';
 import './EditProfile.css';
 function Editprofile(){
     return(
-        <div className="editProfileBox">
-            <form className="edit">
-            <table className="t" align="center"  width="30%" bgcolor="#F5F1F1" cellSpacing="20">
-                <table width="40%" cellSpacing="1"> 
-                 <tr> <input className="back"  type="button" value="< back"/><br/></tr>   
-                 <tr><br/><label className="Name">Name</label><br/><input className="username" placeholder="Enter Name" type="text"/><br/></tr>
-                 <tr><br/><br/><label className="Mail">Email</label><br/><input className="email" placeholder="Enter Mail" type="text"/><br/></tr>
-                 <tr><br/><br/><label className="Pwd">Password</label><br/><input className="password" placeholder="Enter Password" type="password"/><br/></tr>
-                 <tr><br/><br/><label className="Age">Age</label><br/><input className="userAge" placeholder="Enter Age" type="text"/><br/></tr>
-                 <tr><br/><br/><label className="Number">Mobile Number</label><br/><input className="mobilenumber" placeholder="Enter Number" type="text"/><br/></tr>
-                 <br/><br/><br/>
-                      <input className="editProfileButton"  type="button" value="Save Changes"/>
-                </table>
-             </table>
-            </form>
-        </div>
+        
+        <div class="card text-center" id="signupBox">
+               <input type="button" class="back" value="< back"/>
+            <label>Name</label>
+            <input type="text" class="second" name="Name" size="15" id="adminname" placeholder="  Enter Admin Name" /> 
+             <br/><br/>
+             <label>Email</label>
+            <input type="email" class="second" id="email" name="Email" placeholder="  Enter Email" /> 
+            <br/>
+             <br />
+             <label>Password</label>
+             <input type="Password"class="second"  id="password" name="Password" placeholder="  Enter Password" id="password" /> 
+             <br/>
+             <br/>
+             <label>Age</label>
+             <input type="text"class="second"  name="Age" size="3" id="hotelAddress" placeholder="  Enter Hotel Address" /> 
+             <br/>
+             <br/>
+             <label>Mobile Number</label>
+             <input type="tel" class="second" name="mobilenumber" size="10" pattern="[1-9]{1}[0-9]{9}" placeholder="   Enter Mobile Number" id="mobilenumber" />
+             <br/>
+             <br/>
+             <button class="btn btn-danger" >Save Changes</button>
+             </div>
     );
 
 }
