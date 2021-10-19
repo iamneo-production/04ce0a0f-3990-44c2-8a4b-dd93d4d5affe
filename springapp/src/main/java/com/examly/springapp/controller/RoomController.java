@@ -31,7 +31,7 @@ public class RoomController {
         return roomService.editRoom(room);
     }
 
-    @DeleteMapping("/admin/deleteRoom")
+    @GetMapping("/admin/deleteRoom")
     public void deleteRoom(@RequestParam("id") int id){
         roomService.deleteRoom(id);
     }

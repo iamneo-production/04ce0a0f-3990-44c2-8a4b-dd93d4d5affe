@@ -1,8 +1,11 @@
 import React from 'react';
 import './Room.css';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 function Room(props){
     const history = useHistory();
+    
+    const baseURL = localStorage.getItem("baseURL");
     function editClicked(){
         console.log("edit");
         localStorage.setItem("adminId",props.adminId);
@@ -11,6 +14,14 @@ function Room(props){
     }
     function deleteClicked(){
         console.log("delete");
+        axios.get(baseURL+'/admin/deleteRoom?id='+props.room.id)
+        .then(response => {
+            console.log("deleted");
+            window.location.reload();
+        })
+        .catch(error => {
+            console.log('There was an error!', error);      
+        });
     }
     return (
         <div class="room">
