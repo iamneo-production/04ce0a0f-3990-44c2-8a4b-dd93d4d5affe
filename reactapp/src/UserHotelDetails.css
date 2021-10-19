@@ -6,12 +6,21 @@
 .tr2{
     margin-top:25px;
     border-radius: 15px;
-    padding-top:15px;
+    margin-top: 15px;
+    border-collapse: separate;
+    
 }
 .tab1{
     margin-top:25px;
-    background-color: rgba(0,0,0,0.1);
 }
 .td2,.td3,.td4,.td5{
     text-align: center;
 }
+.tab2{
+    border-collapse: collapse;
+}
+/*.d{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width:80%
+}*/
