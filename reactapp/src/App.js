@@ -4,12 +4,15 @@ import  { Redirect } from 'react-router-dom';
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
 import Hotel_Navbar from './UserNavbar';
+import AdminNavbar from './AdminNavbar';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
 import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
-import React from 'react'
+import AdminDashboard from './AdminDashboard';
+import Room from './Room';
+import React from 'react';
 
 function App() {
   localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
@@ -26,8 +29,14 @@ function App() {
       <Route path="/login">          
          <Login />cd 
       </Route>
+      <Route path="/room">          
+         <Room/>
+      </Route>
       <Route path="/user/dashboard">          
         <UserDashboard />  
+      </Route>
+      <Route path="/adminNavbar">          
+        <AdminNavbar />  
       </Route> 
       <Route path="/user/hotelDetail">          
         <HotelDetails/> 
@@ -55,7 +64,7 @@ function App() {
          
       </Route>
       <Route path="/admin/dashboard">          
-         
+         <AdminDashboard/>
       </Route>
       <Route path="/admin/addRoom">          
          
@@ -82,7 +91,7 @@ function App() {
          
       </Route>
       <Route path="/"> 
-        <Redirect to='/login'/>
+        <Redirect to='/admin/dashboard'/>
       </Route>
       </Switch>
     </div>
