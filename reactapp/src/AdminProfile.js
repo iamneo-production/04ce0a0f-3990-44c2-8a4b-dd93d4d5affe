@@ -19,7 +19,7 @@ function AdminProfile(){
         <div class="editprofile">
         <input type="image" src="profilepic.png"/>
         <br/>
-        <button>edit profile</button>
+        <button>edit profile</button>x
         </div>
      </div>
     );

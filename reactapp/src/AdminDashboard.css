@@ -1,0 +1,19 @@
+h1{
+    margin-left: 20%;
+}
+.earnings{
+    background-color: grey;
+    padding :2%;
+}
+.rooms{
+    display:inline-block;
+    width:700px;
+    
+}
+.addroom{
+    background-color: red;
+}
+.total{
+    display:inline-block;
+    width:50%;
+}

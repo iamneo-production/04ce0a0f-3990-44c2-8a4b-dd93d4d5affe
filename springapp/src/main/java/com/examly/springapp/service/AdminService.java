@@ -37,5 +37,9 @@ public class AdminService {
         return (List<Admin>) adminRepository.findAll();
     }
 
+    public Admin getRooms(String email){
+        return adminRepository.findByEmail(email);
+    }
+
 
 }

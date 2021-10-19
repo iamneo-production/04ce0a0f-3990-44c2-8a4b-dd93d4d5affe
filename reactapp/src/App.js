@@ -14,7 +14,9 @@ import SuperNavbar from './SuperNavbar';
 import NavbarHome from './Navbar';
 import UserRoomDetails from './UserRoomDetails';
 import UserNavbar from './UserNavbar';
-
+import AdminProfile from './AdminProfile';
+import AdminDashboard from './AdminDashboard';
+import AdminDash from './AdminDash';
 import React from 'react'
 
 function App() {
@@ -61,11 +63,11 @@ function App() {
       <Route path="/admin/signup">          
         <AdminSignup/>
       </Route> 
-      <Route path="/admin/profile/:adminId">          
-         
+      <Route path="/admin/profile">          
+         <AdminProfile/>
       </Route>
       <Route path="/admin/dashboard">          
-         
+         <AdminDash/>
       </Route>
       <Route path="/admin/addRoom">          
          

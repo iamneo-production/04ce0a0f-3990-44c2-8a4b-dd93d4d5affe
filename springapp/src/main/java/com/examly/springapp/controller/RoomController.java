@@ -36,10 +36,7 @@ public class RoomController {
         roomService.deleteRoom(id);
     }
 
-    @GetMapping("/admin/dashboard")
-    public List<Room> getRooms(@RequestParam("email") String email){
-        return roomService.getRooms(email);
-    }
+    
 
 
 
