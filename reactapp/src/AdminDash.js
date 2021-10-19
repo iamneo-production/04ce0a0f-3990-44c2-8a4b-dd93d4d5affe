@@ -38,13 +38,13 @@ function AdminDash(){
             <body>
                 <AdminNavbar/>
                 <center><h1 class="hotelName">Hotel Name</h1></center>
-                <div class="container-outer">
+                <div class="container-outer" id="adminDashboard">
                 
                 <div class="room">
                     <br/>
                     {rooms.map(function (room) {
                         return(
-                            <Room room={room}
+                            <Room room={room} id={room.id}
                             />
                         )
                     }
@@ -57,7 +57,7 @@ function AdminDash(){
                         <center>
                         <br/>
                         <p class="add-text">Want to add a New Room?</p><br/>
-                        <button class="add-button" >+ Add Room</button>
+                        <button class="add-button" id="addRoomButton">+ Add Room</button>
                         </center>
                     </div><br/><br/><br/>
                     <div class="container">

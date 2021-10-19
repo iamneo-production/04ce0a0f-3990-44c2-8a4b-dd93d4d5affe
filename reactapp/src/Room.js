@@ -9,9 +9,9 @@ function Room(props){
     }
     return (
         <div class="room">
-            <div class="status">
-            <p >{props.room.status}</p>
-            </div>
+            <div class={props.room.status}><p >{props.room.status}</p></div>
+            {/* {props.status==="BOOKED"?<div class="status"><p >{props.room.status}</p></div>:<div class="non-status"><p >{props.room.status}</p></div>} */}
+            
             
             <div class="details"> 
             <div class="roomno">
