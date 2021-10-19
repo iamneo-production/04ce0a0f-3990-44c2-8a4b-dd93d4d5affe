@@ -8,8 +8,15 @@ import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
 import AdminEditRoom from './AdminEditRoom';
 import Hotel_Navbar from './UserNavbar';
-import adminAddRoom from './AdminAddRoom';
-
+import AdminAddRoom from './AdminAddRoom';
+import Admin_Navbar from "./Admin_Navbar";
+import SuperAdminNavbar from "./SuperAdminNavbar";
+import SuperAdminBooking from "./SuperAdminBooking";
+import UserDashboard from "./UserDashboard";
+import UserProfile from "./UserProfile";
+import AdminProfile from "./AdminProfile";
+import UserHotelDetails
+ from "./UserHotelDetails";
 function App() {
   return (
     <Router>
@@ -17,6 +24,15 @@ function App() {
       
       <Switch>
       {/* User Routings   */}
+       
+      <Route path="/user/hotelDetail">          
+         <Hotel_Navbar/>
+         <UserHotelDetails/>
+      </Route>
+      <Route path="/user/profile">          
+         <Hotel_Navbar/>
+         <UserProfile/>
+         </Route>
       <Route path="/user/bookings">    
         <Hotel_Navbar/>      
         <UserHotelBooking />
@@ -28,8 +44,9 @@ function App() {
       <Route path="/login">          
          
       </Route>
-      <Route path="/user/dashboard">          
-         
+      <Route path="/user/dashboard">
+        <Hotel_Navbar/>          
+         <UserDashboard/>
       </Route> 
       <Route path="/user/hotelDetail/{hotelId}">          
          
@@ -50,14 +67,22 @@ function App() {
 
 
       {/* Admin Routings */}
+      <Route path="/admin/profile">          
+         <Admin_Navbar/>
+         <AdminProfile/>
+         </Route>
       <Route path="/admin/editRoom">          
-        <Hotel_Navbar/>
+        <Admin_Navbar/>
         <AdminEditRoom/>
       </Route>
       <Route path="/admin/bookings">          
-         <Hotel_Navbar/>
+         <Admin_Navbar/>
          <AdminBooking/>
          </Route>
+      <Route path="/admin/editProfile">          
+        <Admin_Navbar/>
+        <AdminProfileEdit/>   
+       </Route>
       <Route path="/admin/signup">          
          
       </Route> 
@@ -68,8 +93,8 @@ function App() {
          
       </Route>
       <Route path="/admin/addRoom">          
-         <Hotel_Navbar/>
-         <adminAddRoom/>
+         <Admin_Navbar/>
+         <AdminAddRoom/>
       </Route>
       <Route path="/admin/editRoom/{roomId}">          
          
@@ -90,7 +115,8 @@ function App() {
          
       </Route>
       <Route path="/superadmin/adminBookings">          
-         
+         <SuperAdminNavbar/>
+         <SuperAdminBooking/>
       </Route>
       </Switch>
     </div>
