@@ -51,5 +51,10 @@ public class UserController {
         return userService.userBookings(id);
     }
 
+    @GetMapping("user/detail")
+    public User getUser(@RequestParam String email){
+        return userService.getUser(email);
+    }
+
 
 }

@@ -11,11 +11,17 @@ function UserDashboard(){
     useEffect(()=>{
         axios.get(baseURL+'/user/dashboard')
         .then(response => {
-            setHotels(response.data)
+            setHotels(response.data);
+            console.log(localStorage.getItem("userEmail"));
+            
         })
         .catch(error => {
             console.log('There was an error!', error);      
         });
+
+        
+
+
       },[])
     // const hotelsList=[
     //     {

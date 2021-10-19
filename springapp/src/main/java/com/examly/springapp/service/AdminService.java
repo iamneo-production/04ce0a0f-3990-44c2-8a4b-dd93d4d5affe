@@ -5,10 +5,12 @@ import org.springframework.stereotype.Service;
 import com.examly.springapp.model.Admin;
 import com.examly.springapp.model.Login;
 import com.examly.springapp.model.Room;
+import com.examly.springapp.model.Booking;
 
 import com.examly.springapp.model.User;
 import com.examly.springapp.repository.RoomRepository;
 import com.examly.springapp.repository.AdminRepository;
+import com.examly.springapp.repository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
@@ -21,6 +23,9 @@ public class AdminService {
 
     @Autowired
     private AdminRepository adminRepository;
+
+    @Autowired
+    private BookingRepository bookingRepository;
 
     public Admin editAdmin(Admin admin){
         return adminRepository.save(admin);
@@ -39,6 +44,10 @@ public class AdminService {
 
     public Admin getRooms(String email){
         return adminRepository.findByEmail(email);
+    }
+
+    public List<Booking> getBookings(int id){
+        return bookingRepository.findByAdminId(id);
     }
 
 

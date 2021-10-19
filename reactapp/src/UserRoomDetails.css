@@ -1,8 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
   }
   body {
     font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
   }
   .v27_137 {
     width: 100%;
@@ -23,7 +28,7 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 567px;
+    top: 55%;
     left: 652px;
     overflow: hidden;
   }
@@ -203,6 +208,7 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     overflow: hidden;
+    background: url("https://pix8.agoda.net/hotelImages/433/43322/43322_17111604170059419800.jpg");
   }
   .v27_184 {
     width: 365px;
@@ -220,7 +226,7 @@
   .v27_172 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://pix8.agoda.net/hotelImages/433/43322/43322_17041516100052420644.jpg");
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -234,7 +240,7 @@
   .v27_180 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202107/Hospitality-A_room_with_a_view_1200x768.jpeg?RAib7EXgur3WKGZH3LNH6RNGKSyO8zMg&size=770:433");
     opacity: 1;
     position: absolute;
     top: 97px;
@@ -248,7 +254,7 @@
   .v27_173 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://pix8.agoda.net/hotelImages/433/43322/43322_17042708010052658295.jpg?s=240x78");
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -262,7 +268,7 @@
   .v27_181 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://pix8.agoda.net/hotelImages/433/43322/43322_17042707550052658265.jpg?s=1024x768");
     opacity: 1;
     position: absolute;
     top: 97px;
@@ -276,7 +282,7 @@
   .v27_178 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://pix8.agoda.net/hotelImages/433/43322/43322_17042707550052658265.jpg?s=1024x768");
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -304,7 +310,7 @@
   .v27_179 {
     width: 79px;
     height: 73px;
-    background: rgba(242,242,242,1);
+    background: url("https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp");
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -404,4 +410,22 @@
     border-bottom-right-radius: 15px;
     overflow: hidden;
   }
-  
+  .book-button{
+      width: 120.15px;
+      height: 34.56px;
+      text-align:center;
+      border: none;
+      background: #009c1a;
+      border-radius: 10px;
+      color:white;
+      cursor:pointer;
+  }
+  .book-button-not{
+      width: 120.15px;
+      height: 34.56px;
+      text-align:center;
+      border: none;
+      background: #f1580054;
+      border-radius: 10px;
+      color:white;
+  }

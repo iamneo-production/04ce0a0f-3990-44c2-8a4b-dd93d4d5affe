@@ -25,9 +25,9 @@ function HotelDetails(props) {
       },[])
 
         return (
-            <div className="outer-div" style={{border:"2px solid #ff6347",borderRadius:"5px"}}>
+            <div id="hotelDetails" className="outer-div" style={{border:"2px solid #ff6347",borderRadius:"5px"}}>
                 <div className="hotel-div">
-                    <p>{name}</p>
+                    <h3>{name}</h3>
                     <p>{address}</p>
                     <p>{number}</p>
                 </div>

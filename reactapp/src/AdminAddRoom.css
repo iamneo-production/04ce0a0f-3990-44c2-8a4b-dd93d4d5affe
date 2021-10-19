@@ -1,4 +1,4 @@
-.rno,.rp,.rt{
+/* .rno,.rp,.rt{
 	font-size:20px;
 }
 .roomNo,.roomPrice,.roomType{
@@ -48,4 +48,48 @@
 }
 .addRoomBox{
 	margin-top: 10%;
+} */
+
+
+.table{
+    margin: 3%;
+    margin-top: 10%;
+}
+
+.table>table{
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+table tr:first-child th:first-child 
+{
+    border-top-left-radius: 7px;
+}
+
+table tr:first-child th:last-child 
+{
+    border-top-right-radius: 7px;
+}
+
+table tr:last-child td:first-child 
+{
+    border-bottom-left-radius: 7px;
+}
+
+table tr:last-child td:last-child 
+{
+    border-bottom-right-radius: 7px;
+}
+
+th,td{
+    padding: 8px;
+}
+
+th{
+    background-color: red;
+    color: whitesmoke;
+}
+td{
+    background-color: #eeeeee;
 }

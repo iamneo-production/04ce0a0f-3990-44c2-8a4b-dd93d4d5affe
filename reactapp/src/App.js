@@ -8,19 +8,18 @@ import AdminSignup from './AdminSignup';
 import UserSignup from './UserSignup';
 import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
-import IndividualStatus from './IndividualStatus';
 import SuperAdminLogin from './SuperAdminLogin';
 import SuperNavbar from './SuperNavbar';
 import NavbarHome from './Navbar';
 import UserRoomDetails from './UserRoomDetails';
 import UserNavbar from './UserNavbar';
 import AdminProfile from './AdminProfile';
-import AdminDashboard from './AdminDashboard';
 import AdminDash from './AdminDash';
 import AdminEditRoom from './AdminEditRoom';
 import AdminAddRoom from './AdminAddRoom';
 import AdminNavbar from './AdminNavbar';
 import AdminProfileEdit from './AdminProfileEdit';
+import AdminBooking from './AdminBooking';
 import React from 'react'
 
 function App() {
@@ -46,8 +45,8 @@ function App() {
         <UserNavbar/> 
         <HotelDetails/> 
       </Route>
-      <Route path="/user/roomDetail/:roomId">          
-        <UserNavbar/> 
+      <Route path="/user/roomDetail/:roomId">   
+        <UserNavbar/>         
         <UserRoomDetails />
       </Route>
       <Route path="/user/editProfile/:userId">          
@@ -84,6 +83,7 @@ function App() {
       </Route>
       <Route path="/admin/bookings/:adminId">          
         <AdminNavbar/> 
+        <AdminBooking/>
       </Route>
       <Route path="/admin/editProfile/:adminId">          
         <AdminNavbar/> 

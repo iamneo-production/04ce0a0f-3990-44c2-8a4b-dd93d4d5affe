@@ -8,7 +8,7 @@ function UserHotelBooking(props){
     const baseURL = localStorage.getItem("baseURL");
     
     useEffect(()=>{
-        axios.post(baseURL+'/admin/editRoom/'+props.match.params.id)
+        axios.post(baseURL+'/user/bookings?id='+props.match.params.userId)
         .then(response => {
             setBookings(response.data)
         })
@@ -46,52 +46,52 @@ function UserHotelBooking(props){
     // }
 
     
-    const bookingList=[
-        {
-            hotelName: "jay",
-            roomNo: "502",
-            price: 1000,
-            quantity: 1,
-            totalPrice: 1000
-        },
-        {
-            hotelName: "uhiuhy",
-            roomNo: "5012",
-            price: 1000,
-            quantity: 1,
-            totalPrice: 1000
-        },
-        {
-            hotelName: "jay",
-            roomNo: "502",
-            price: 1000,
-            quantity: 1,
-            totalPrice: 1000
-        }
-    ];
+    // const bookingList=[
+    //     {
+    //         hotelName: "jay",
+    //         roomNo: "502",
+    //         price: 1000,
+    //         quantity: 1,
+    //         totalPrice: 1000
+    //     },
+    //     {
+    //         hotelName: "uhiuhy",
+    //         roomNo: "5012",
+    //         price: 1000,
+    //         quantity: 1,
+    //         totalPrice: 1000
+    //     },
+    //     {
+    //         hotelName: "jay",
+    //         roomNo: "502",
+    //         price: 1000,
+    //         quantity: 1,
+    //         totalPrice: 1000
+    //     }
+    // ];
     return(
         
-        <div className="userBookingBody">
-           <table className="ta" align="center">
-               <tr className="tr1" cellSpacing="50">
-                        <td>Hotel Name</td>
-                        <td>Room No</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Total Price</td>
+        <center>
+        <div class="table" id="userBookingBody">
+        <table>
+            <tr>
+                <th>Hotel Name</th>
+                <th>Room No</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+            {bookings.map(booking => (
+                <tr className="tb" cellSpacing="50">
+                        <td>{booking.hotelName}</td>
+                        <td>{booking.roomNo}</td>
+                        <td>{booking.price}</td>
+                        <td>1</td>                        
+                        <td>{booking.price}</td>
                </tr>
-           
-           {bookings.map(booking => (
-                <tr className="tr_tb" cellSpacing="50">
-                        <td>{booking.userId}</td>
-                        <td>{booking.id}</td>
-                        <td>{booking.title}</td>
-                        <td>{booking.id}</td>
-                        <td>{booking.body}</td>
-               </tr>
-            ))}
-           </table>
-        </div>
+            ))}   
+        </table>
+        </div></center>
     );
 }
 
