@@ -11,6 +11,7 @@ import UserDashboard from './UserDashboard';
 import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
 import AdminDashboard from './AdminDashboard';
+import AdminProfile from './AdminProfile';
 import Room from './Room';
 import React from 'react';
 
@@ -87,11 +88,14 @@ function App() {
       <Route path="/superadmin/adminList">          
          
       </Route>
-      <Route path="/superadmin/adminBookings">          
-         
+      <Route path="/superadmin/adminBookings"> 
+
+      </Route>
+      <Route path="/admin/profile">          
+         <AdminProfile/>
       </Route>
       <Route path="/"> 
-        <Redirect to='/admin/dashboard'/>
+        <Redirect to='/admin/profile'/>
       </Route>
       </Switch>
     </div>
