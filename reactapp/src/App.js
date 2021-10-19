@@ -18,6 +18,8 @@ import AdminProfile from './AdminProfile';
 import AdminDashboard from './AdminDashboard';
 import AdminDash from './AdminDash';
 import AdminEditRoom from './AdminEditRoom';
+import AdminAddRoom from './AdminAddRoom';
+import AdminNavbar from './AdminNavbar';
 import React from 'react'
 
 function App() {
@@ -64,23 +66,26 @@ function App() {
       <Route path="/admin/signup">          
         <AdminSignup/>
       </Route> 
-      <Route path="/admin/profile">          
+      <Route path="/admin/profile">
+         <AdminNavbar/>          
          <AdminProfile/>
       </Route>
       <Route path="/admin/dashboard">          
          <AdminDash/>
       </Route>
-      <Route path="/admin/addRoom">          
-         
+      <Route path="/admin/addRoom">  
+         <AdminNavbar/>         
+         <AdminAddRoom/>
       </Route>
-      <Route path="/admin/editRoom/:roomId">          
+      <Route path="/admin/editRoom/:roomId">
+         <AdminNavbar/>           
          <AdminEditRoom/>
       </Route>
       <Route path="/admin/bookings/:adminId">          
-         
+        <AdminNavbar/> 
       </Route>
       <Route path="/admin/editProfile/:adminId">          
-         
+        <AdminNavbar/> 
       </Route>
 
 

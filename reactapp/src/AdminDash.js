@@ -4,24 +4,29 @@ import Room from './Room';
 import AdminNavbar from './AdminNavbar';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 function AdminDash(){
     const baseURL = localStorage.getItem("baseURL");
     const [rooms,setRooms]=useState([]);
-    const [admin,setAdmin]=useState();
+    const [adminData,setAdminData]=useState({});
     const email = localStorage.getItem('adminEmail')
+    const history = useHistory();
     useEffect(()=>{
         axios.get(baseURL+'/admin/dashboard?email='+email)
         .then(response => {
-            console.log(response);
-            setAdmin(response.data);
+            setAdminData(response.data);
             localStorage.setItem("adminId",response.data.id);
             setRooms(response.data.rooms);
+            console.log(response.data);
         })
         .catch(error => {
             console.log('There was an error!', error);      
         });
       },[])
 
+    function addRoom(){
+        history.push("/admin/addRoom")
+    }  
     return(
         
         <html>
@@ -38,14 +43,14 @@ function AdminDash(){
 
             <body>
                 <AdminNavbar/>
-                <center><h1 class="hotelName">Hotel Name</h1></center>
+                <center><h1 class="hotelName">{adminData.hotelName}</h1></center>
                 <div class="container-outer" id="adminDashboard">
                 
                 <div class="room">
                     <br/>
                     {rooms.map(function (room) {
                         return(
-                            <Room room={room} id={room.id} adminId={admin.id}
+                            <Room room={room} id={room.id} adminId={adminData.id}
                             />
                         )
                     }
@@ -58,7 +63,7 @@ function AdminDash(){
                         <center>
                         <br/>
                         <p class="add-text">Want to add a New Room?</p><br/>
-                        <button class="add-button" id="addRoomButton">+ Add Room</button>
+                        <button onClick={addRoom} class="add-button" id="addRoomButton">+ Add Room</button>
                         </center>
                     </div><br/><br/><br/>
                     <div class="container">
@@ -66,10 +71,10 @@ function AdminDash(){
                             <br/>
                         <h3 class="earning-text">Earnings</h3><br/><br/>
                         <h4 class="total-today">Total Today</h4>
-                        <p class="total" >$200</p>
+                        <p class="total" >Rs. {adminData.earnings}</p>
                         <p >________________</p>
                         <h4 class="monthly-text">Monthly</h4>
-                        <p class="monthly">$500</p>
+                        <p class="monthly">Rs. {adminData.earnings}</p>
                         </center>
                     </div>
                     </center>
