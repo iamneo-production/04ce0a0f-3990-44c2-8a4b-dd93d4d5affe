@@ -12,8 +12,10 @@ import HotelDetails from './HotelDetails';
 import IndividualStatus from './IndividualStatus';
 import AdminDashboard from './AdminDashboard';
 import AdminProfile from './AdminProfile';
+import adminprofileEdit from './AdminProfileEdit';
 import Room from './Room';
 import React from 'react';
+import SuperAdminLogin from './SuperAdminLogin';
 
 function App() {
   localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
@@ -79,11 +81,14 @@ function App() {
       <Route path="/admin/editProfile/{adminId}">          
          
       </Route>
+      <Route path="/admin/editprofiles">          
+         <adminprofileEdit/>
+      </Route>
 
 
       {/* SuperAdmin Routings */}
       <Route path="/superadmin/login">          
-         
+         <SuperAdminLogin/>
       </Route>
       <Route path="/superadmin/adminList">          
          
@@ -95,7 +100,7 @@ function App() {
          <AdminProfile/>
       </Route>
       <Route path="/"> 
-        <Redirect to='/admin/profile'/>
+        <Redirect to='/superadmin/login'/>
       </Route>
       </Switch>
     </div>
