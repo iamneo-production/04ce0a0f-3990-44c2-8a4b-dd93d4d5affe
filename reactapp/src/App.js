@@ -17,6 +17,7 @@ import UserNavbar from './UserNavbar';
 import AdminProfile from './AdminProfile';
 import AdminDashboard from './AdminDashboard';
 import AdminDash from './AdminDash';
+import AdminEditRoom from './AdminEditRoom';
 import React from 'react'
 
 function App() {
@@ -73,7 +74,7 @@ function App() {
          
       </Route>
       <Route path="/admin/editRoom/:roomId">          
-         
+         <AdminEditRoom/>
       </Route>
       <Route path="/admin/bookings/:adminId">          
          

@@ -6,9 +6,9 @@ import {withRouter} from 'react-router-dom';
 function UserHotelBooking(props){
     const [bookings,setBookings]=useState([]);
     const baseURL = localStorage.getItem("baseURL");
-
+    
     useEffect(()=>{
-        axios.post(baseURL+'/user/bookings/'+props.match.params.id)
+        axios.post(baseURL+'/admin/editRoom/'+props.match.params.id)
         .then(response => {
             setBookings(response.data)
         })

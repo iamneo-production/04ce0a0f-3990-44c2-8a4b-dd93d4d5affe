@@ -36,6 +36,10 @@ public class RoomController {
         roomService.deleteRoom(id);
     }
 
+    @GetMapping("/admin/getroom")
+    public Room getRoom(@RequestParam("id") int id){
+        return roomService.getRoom(id);
+    }
     
 
 

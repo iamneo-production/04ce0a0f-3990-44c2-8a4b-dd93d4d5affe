@@ -38,4 +38,8 @@ public class RoomService {
     public List<Room> getRooms(String email){
         return adminRepository.findByEmail(email).getRooms();
     }
+
+    public Room getRoom(int id){
+        return roomRepository.findById(id).get();
+    }
 }

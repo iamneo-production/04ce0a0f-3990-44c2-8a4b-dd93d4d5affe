@@ -1,8 +1,11 @@
 import React from 'react';
 import './Room.css';
+import { useHistory } from 'react-router-dom';
 function Room(props){
+    const history = useHistory();
     function editClicked(){
         console.log("edit");
+        history.push('/admin/editRoom/'+props.room.id)
     }
     function deleteClicked(){
         console.log("delete");
