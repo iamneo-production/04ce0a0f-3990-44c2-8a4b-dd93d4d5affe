@@ -20,6 +20,8 @@ import AdminAddRoom from './AdminAddRoom';
 import AdminNavbar from './AdminNavbar';
 import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
+import UserProfile from './UserProfile';
+import UserEditProfile from './UserEditProfile';
 import React from 'react'
 
 function App() {
@@ -51,6 +53,7 @@ function App() {
       </Route>
       <Route path="/user/editProfile/:userId">          
         <UserNavbar/> 
+        <UserEditProfile/>
       </Route>
       <Route path="/user/bookings/:userId">          
         <UserNavbar/>      
@@ -58,6 +61,7 @@ function App() {
       </Route>
       <Route path="/user/profile/:userId">          
         <UserNavbar/> 
+        <UserProfile/>
       </Route>
 
 
