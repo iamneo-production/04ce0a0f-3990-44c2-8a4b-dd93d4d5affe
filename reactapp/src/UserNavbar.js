@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import  { Redirect } from 'react-router-dom';
 import {
     BrowserRouter as Router,
@@ -8,12 +8,26 @@ import {
 } from "react-router-dom";
 import './UserNavbar.css';
 import { useHistory } from 'react-router-dom';
+import {useEffect} from 'react';
+import axios from 'axios';
 
 function UserNavbar(){
         const history = useHistory();
+        const baseURL = localStorage.getItem("baseURL");
+        const [userId, setUserId]=useState({});
+        useEffect(()=>{
+            axios.get(baseURL+'/user/detail?email='+localStorage.getItem("userEmail"))
+                .then(response => {
+                    localStorage.setItem("userId",response.data.id);
+                })
+                .catch(error => {
+                    console.log('There was an error!', error);      
+                });
+        },[])
         function logout(){
             localStorage.clear();
             sessionStorage.clear();
+            localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
             history.push("/login");
         }
         return (
@@ -21,8 +35,8 @@ function UserNavbar(){
                 <div className="Navbar_Hotel" id="userNavbar">
                  <a href='#' className="title"><strong>Rental Rooms</strong></a>
                                 <Link to="/user/dashboard" className="dashboard">Dashboard</Link>
-                                <Link to="/user/profile" className="profile">Profile</Link>
-                                <Link to="/user/booking" className="mybooking">MyBooking</Link>
+                                <Link to={"/user/profile/"+localStorage.getItem("userId")} className="profile">Profile</Link>
+                                <Link to={"/user/bookings/"+localStorage.getItem("userId")} className="mybooking">MyBooking</Link>
                                 <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>       
                     
                 </div>

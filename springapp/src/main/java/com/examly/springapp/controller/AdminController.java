@@ -4,6 +4,7 @@ package com.examly.springapp.controller;
 import com.examly.springapp.model.User;
 import com.examly.springapp.model.Admin;
 import com.examly.springapp.model.Login;
+import com.examly.springapp.model.Booking;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,11 @@ public class AdminController {
     @GetMapping("/admin/dashboard")
     public Admin getRooms(@RequestParam("email") String email){
         return adminService.getRooms(email);
+    }
+
+    @GetMapping("/admin/bookings")
+    public List<Booking> getBookings(@RequestParam("id") int id){
+        return adminService.getBookings(id);
     }
 
 }

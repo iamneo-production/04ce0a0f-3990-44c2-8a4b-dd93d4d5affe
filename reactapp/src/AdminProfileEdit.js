@@ -59,13 +59,16 @@ function AdminProfileEdit(props){
       
 
     }  
+    function goBack(){
+        history.push("/admin/profile")
+    }
     return(
         <center>
         <div className="adminEditBox" id="adminEditBox">
             <form className="edit">
             <table className="t" align="center"  width="30%" bgcolor="#F5F1F1" cellSpacing="20">
                 <table width="40%" cellSpacing="1"> 
-                 <tr> <input className="back"  type="button" value="< back"/><br/></tr>   
+                 <tr> <input className="back"  type="button" value="< back" onClick={goBack}/><br/></tr>   
                  <tr><br/><label className="Name">Name</label><br/><input value={name} onChange={(e)=>{setName(e.target.value)}} className="adminName" id="adminName" placeholder="Enter Name" type="text"/><br/></tr>
                  <tr><br/><br/><label className="Mail">Email</label><br/><input value={email} onChange={(e)=>{setEmail(e.target.value)}} className="adminEmail" id="adminEmail" placeholder="Enter Mail" type="text"/><br/></tr>
                  <tr><br/><br/><label className="Number">Mobile Number</label><br/><input value={mobileNumber} onChange={(e)=>{setMobileNumber(e.target.value)}} className="adminMobileNumber" id="adminMobileNumber" placeholder="Enter Number" type="text"/><br/></tr>

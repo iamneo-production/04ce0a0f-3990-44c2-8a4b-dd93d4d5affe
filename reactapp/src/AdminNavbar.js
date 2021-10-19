@@ -14,6 +14,7 @@ function AdminNavbar(){
         function logout(){
             localStorage.clear();
             sessionStorage.clear();
+            localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
             history.push("/login");
         }
         return (
@@ -22,7 +23,7 @@ function AdminNavbar(){
                  <a href='#' className="title"><strong>Rental Rooms</strong></a>
                                 <Link to="/admin/dashboard" className="dashboard" id="adminDashboardLink">Dashboard</Link>
                                 <Link to="/admin/profile" className="profile" id="adminProfileLink">Profile</Link>
-                                <Link to="/user/booking" className="mybooking" id="adminBookingLink">Booking</Link>
+                                <Link to={"/admin/bookings/"+localStorage.getItem("adminId")} className="mybooking" id="adminBookingLink">Booking</Link>
                                 <button onClick={()=>{logout()}} className="UserLogoutButton" id="adminLogoutButton">Logout</button>       
                     
                 </div>

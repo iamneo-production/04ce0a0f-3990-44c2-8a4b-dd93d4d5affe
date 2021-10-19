@@ -21,6 +21,8 @@ public class Booking {
 
     int roomId;
 
+    String roomNo;
+
     String hotelName;
 
     String hotelImageURL;

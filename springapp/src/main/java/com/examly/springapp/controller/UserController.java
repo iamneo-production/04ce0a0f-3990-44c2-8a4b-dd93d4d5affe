@@ -51,5 +51,14 @@ public class UserController {
         return userService.userBookings(id);
     }
 
+    @GetMapping("user/detail")
+    public User getUser(@RequestParam("email") String email){
+        return userService.getUser(email);
+    }
+    @GetMapping("user/by")
+    public User getUser(@RequestParam("id") int id){
+        return userService.getUserById(id);
+    }
+
 
 }

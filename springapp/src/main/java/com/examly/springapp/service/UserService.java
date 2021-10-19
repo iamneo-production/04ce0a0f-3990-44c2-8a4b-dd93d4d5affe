@@ -57,8 +57,9 @@ public class UserService {
         Room room=roomRepository.findById(bookingData.getRoomId()).get();
         Admin admin = adminRepository.findById(room.getAdmin().getId()).get();
         Booking booking = new Booking();
-        booking.setUserId(bookingData.getUserId());
+        booking.setUserId(userRepository.findByEmail(bookingData.getEmail()).getId());
         booking.setRoomId(room.getId());
+        booking.setRoomNo(room.getRoomNo());
         booking.setAdminId(room.getAdmin().getId());
         booking.setHotelAddress(room.getAdmin().getHotelAddress());
         booking.setHotelImageURL(room.getAdmin().getHotelImageURL());
@@ -76,6 +77,14 @@ public class UserService {
 
     public List<Booking> userBookings(int userId){
         return bookingRepository.findByUserId(userId);
+    }
+
+    public User getUser(String email){
+        return userRepository.findByEmail(email);
+    }
+
+    public User getUserById(int id){
+        return userRepository.findById(id).get();
     }
 
 }

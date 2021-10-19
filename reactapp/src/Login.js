@@ -1,7 +1,13 @@
-import { useState } from "react";
+import {useState} from 'react';
 import axios from 'axios';
 import "./Login.css";
 import { useHistory } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function Tabs() {
   const baseURL = localStorage.getItem("baseURL");
@@ -16,16 +22,21 @@ function Tabs() {
   {
     let data={email,password}
     console.log("data:",data);
+    localStorage.setItem("userEmail",email);
     
-    axios.post(baseURL+'/user/login', data)
-    .then(response => {
-      if(response.data) history.push("/user/dashboard")
-      else alert("Please Enter Correct Password!")
-    })
-    .catch(error => {
-        console.log('There was an error!', error);
-        alert("Please Enter Valid Email Address!");       
-    });
+    
+      axios.post(baseURL+'/user/login', data)
+      .then(response => {
+        if(response.data) history.push("/user/dashboard")
+        else alert("Please Enter Correct Password!")
+      })
+      .catch(error => {
+          console.log('There was an error!', error);
+         
+          alert("Please Enter Valid Email Address!");   
+          window.location.reload();
+      });
+    
   
   }
 
@@ -41,9 +52,17 @@ function Tabs() {
     })
     .catch(error => {
         console.log('There was an error!', error);
-        alert("Please Enter Valid Email Address!");       
+        alert("Please Enter Valid Email Address!");  
+        window.location.reload();     
     });
   
+  }
+
+  function gotouserSignup(){
+    history.push("/user/signup");
+  }
+  function gotoadminSignup(){
+    history.push("/user/signup");
   }
 
   const toggleTab = (index) => {
@@ -91,7 +110,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<a href={userSignup}>Click Here</a></p>
+                    <p id='userSignupLink'>New to Booking?<Link to="/user/signup">Click Here</Link></p>
                 </div>  
             </div>
         </div>
@@ -118,7 +137,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<a href={adminSignup}>Click Here</a></p>
+                    <p id='userSignupLink'>New to Booking?<Link to="/admin/signup">Click Here</Link></p>
                 </div>
             </div>
         </div>

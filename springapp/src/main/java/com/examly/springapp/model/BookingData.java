@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class BookingData {
 
-    int userId;
+    String email;
 
     int roomId;
 
