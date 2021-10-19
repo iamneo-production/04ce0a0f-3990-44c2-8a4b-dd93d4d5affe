@@ -45,7 +45,6 @@ function AdminProfileEdit(props){
             "id": Number(props.match.params.adminId),
             "mobileNumber": mobileNumber,
             "password": password,
-            "rooms": adminData.rooms,
             "sellerName": name,
             "userRole": adminData.userRole
           };
