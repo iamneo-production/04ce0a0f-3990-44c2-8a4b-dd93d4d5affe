@@ -7,13 +7,15 @@
   .v6_4 {
     width: 100%;
     height: 700px;
-    background: rgba(255,255,255,1);
+    background: transparent;
     opacity: 1;
     position: relative;
     top: 0px;
     left: 0px;
     overflow: hidden;
-    margin-top:-50%;
+    margin-top:-80%;
+    margin-right: -50%;
+    z-index: 0;
   }
   .v6_17 {
     width: 236px;
@@ -1278,7 +1280,7 @@
   .rooms{
     display:inline-block;
     width:700px;
-    float:left;
+    left:20%;
     
 }
 .boxes{

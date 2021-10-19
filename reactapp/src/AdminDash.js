@@ -8,10 +8,11 @@ function AdminDash(){
     const baseURL = localStorage.getItem("baseURL");
     const [rooms,setRooms]=useState([]);
     const [admin,setAdmin]=useState();
-
+    const email = localStorage.getItem('adminEmail')
     useEffect(()=>{
-        axios.get(baseURL+'/admin/dashboard')
+        axios.get(baseURL+'/admin/dashboard?email='+email)
         .then(response => {
+            console.log(response)
             setAdmin(response.data)
             setRooms(response.data.rooms)
         })
@@ -19,6 +20,7 @@ function AdminDash(){
             console.log('There was an error!', error);      
         });
       },[])
+
     return(
         
         <html>
@@ -35,16 +37,21 @@ function AdminDash(){
 
             <body>
                 <AdminNavbar/>
-                <center><h1 class="hotelName">{admin.hotelName}</h1></center>
-                <div class="left">
+                <center><h1 class="hotelName">Hotel Name</h1></center>
+                <div class="container">
                 
                 <div class="room">
                     <br/>
-                    <Room rooms={rooms}/>
+                    {rooms.map(function (room) {
+                        return(
+                            <Room room={room}
+                            />
+                        )
+                    }
+                    )}
                 </div>
-                </div>
-                <div class="v6_4" d="adminDashboard">
-                    <div class="v6_18"></div><span class="v6_19">{admin.earnings}</span><span class="v6_20">{admin.earnings}</span><span class="v6_21">Total Today</span><span class="v6_22">Monthly</span><span class="v6_23">Earnings</span>
+                <div class="v6_4" id="adminDashboard">
+                    <div class="v6_18"></div><span class="v6_19">200</span><span class="v6_20">300</span><span class="v6_21">Total Today</span><span class="v6_22">Monthly</span><span class="v6_23">Earnings</span>
                     
                     <div class="v6_90"></div><span class="v15_1">Want to add a New Room</span>
                     <div class="v20_151">
@@ -55,6 +62,7 @@ function AdminDash(){
                     </div>
                     <div class="name"></div>
                 
+                </div>
                 </div>
             </body>
 
