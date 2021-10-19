@@ -31,15 +31,16 @@ public class RoomController {
         return roomService.editRoom(room);
     }
 
-    @DeleteMapping("/admin/deleteRoom")
+    @GetMapping("/admin/deleteRoom")
     public void deleteRoom(@RequestParam("id") int id){
         roomService.deleteRoom(id);
     }
 
-    @GetMapping("/admin/dashboard")
-    public List<Room> getRooms(@RequestParam("email") String email){
-        return roomService.getRooms(email);
+    @GetMapping("/admin/getroom")
+    public Room getRoom(@RequestParam("id") int id){
+        return roomService.getRoom(id);
     }
+    
 
 
 

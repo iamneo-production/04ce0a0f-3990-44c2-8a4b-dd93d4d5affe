@@ -33,4 +33,9 @@ public class AdminController {
         return adminService.getProfile(id);
     }
 
+    @GetMapping("/admin/dashboard")
+    public Admin getRooms(@RequestParam("email") String email){
+        return adminService.getRooms(email);
+    }
+
 }

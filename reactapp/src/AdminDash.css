@@ -1,0 +1,111 @@
+
+.outer{
+		
+}
+.container{
+  width: 356px;
+  height:200px;
+  right:10%;
+  background: #F2F2F2;
+  border-radius: 15px;
+  margin-right:30%;
+}
+.earning-text{
+  width: 94px;
+  height: 30px;
+
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: black;
+}
+.total-today{
+  
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: black;
+
+}
+.total{
+  
+
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: black;
+}
+.monthly-text{
+  
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: black;
+
+}
+.monthly{		
+
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: black;
+}
+.add-container{
+  width: 304px;
+  height: 120px;
+
+  background: #F2F2F2;
+  border-radius: 7px;
+}
+.add-button{
+  width: 156.15px;
+  height: 34.56px;
+  
+  border: none;
+  background: #FFA500;
+  border-radius: 10px;
+  color:white;
+  cursor:pointer;
+}
+.add-text{
+
+  width: 205px;
+  height: 19px;
+
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #000000;
+}
+.rooms{
+  display:inline-block;
+  width:60%;
+  left:20%;
+  z-index:10;
+  
+}
+.container-outer{
+  display:flex;
+  margin-right: 2%;
+}
+.outer{
+  overflow:hidden;
+}

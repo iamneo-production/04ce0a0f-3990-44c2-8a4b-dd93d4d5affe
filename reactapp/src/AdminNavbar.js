@@ -9,7 +9,7 @@ import {
 import './UserNavbar.css';
 import { useHistory } from 'react-router-dom';
 
-function UserNavbar(){
+function AdminNavbar(){
         const history = useHistory();
         function logout(){
             localStorage.clear();
@@ -18,12 +18,12 @@ function UserNavbar(){
         }
         return (
             // <Router>
-                <div className="Navbar_Hotel" id="userNavbar">
+                <div className="Navbar_Hotel" id="adminNavbar">
                  <a href='#' className="title"><strong>Rental Rooms</strong></a>
-                                <Link to="/user/dashboard" className="dashboard">Dashboard</Link>
-                                <Link to="/user/profile" className="profile">Profile</Link>
-                                <Link to="/user/booking" className="mybooking">MyBooking</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>       
+                                <Link to="/admin/dashboard" className="dashboard" id="adminDashboardLink">Dashboard</Link>
+                                <Link to="/admin/profile" className="profile" id="adminProfileLink">Profile</Link>
+                                <Link to="/user/booking" className="mybooking" id="adminBookingLink">Booking</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="adminLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>
@@ -46,4 +46,4 @@ function UserNavbar(){
             </Router> */
         )
         }
-export default UserNavbar
+export default AdminNavbar;

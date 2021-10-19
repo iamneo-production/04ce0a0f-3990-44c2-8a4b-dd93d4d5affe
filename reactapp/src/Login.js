@@ -16,7 +16,7 @@ function Tabs() {
   {
     let data={email,password}
     console.log("data:",data);
-
+    
     axios.post(baseURL+'/user/login', data)
     .then(response => {
       if(response.data) history.push("/user/dashboard")
@@ -33,7 +33,7 @@ function Tabs() {
   {
     let data={email,password}
     console.log("data:",data);
-
+    localStorage.setItem("adminEmail",email);
     axios.post(baseURL+'/admin/login', data)
     .then(response => {
       if(response.data) history.push("/admin/dashboard")
