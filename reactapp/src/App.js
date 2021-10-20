@@ -3,27 +3,27 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  { Redirect } from 'react-router-dom';
 import './App.css';
 import UserHotelBooking from './UserHotelBooking';
-import Login from './Login';
-import AdminSignup from './AdminSignup';
-import UserSignup from './UserSignup';
+import Login from './components/Auth/Login/Login';
+import AdminSignup from './components/Auth/Signup/AdminSignup';
+import Signup from './components/Auth/Signup/UserSignup';
 import UserDashboard from './components/UserSide/UserDashboard/UserDashboard';
 import HotelDetails from './HotelDetails';
 import SuperAdminLogin from './SuperAdminLogin';
 import SuperNavbar from './SuperNavbar';
 import NavbarHome from './Navbar';
 import UserRoomDetails from './UserRoomDetails';
-import UserNavbar from './UserNavbar';
-import AdminProfile from './AdminProfile';
-import AdminDash from './AdminDash';
+import UserNavbar from './components/UserSide/UserNavbar/UserNavbar';
+import AdminProfile from './components/AdminSide/AdminProfile/AdminProfile';
+import AdminDashboard from './components/AdminSide/AdminDashboard/AdminDashboard';
 import AdminEditRoom from './AdminEditRoom';
 import AdminAddRoom from './AdminAddRoom';
-import AdminNavbar from './AdminNavbar';
-import AdminProfileEdit from './AdminProfileEdit';
+import AdminNavbar from './components/AdminSide/AdminNavbar/AdminNavbar';
+import AdminProfileEdit from './components/AdminSide/AdminProfile/AdminProfileEdit';
 import AdminBooking from './AdminBooking';
-import UserProfile from './UserProfile';
-import UserEditProfile from './UserEditProfile';
-import SuperAdminDashboard from './SuperAdminDashboard';
-import SuperAdminNavbar from './SuperAdminNavbar';
+import UserProfile from './components/UserSide/UserProfile/UserProfile';
+import UserEditProfile from './components/UserSide/UserProfile/UserEditProfile';
+import SuperAdminDashboard from './components/SuperAdmin/SuperAdminDashboard/SuperAdminDashboard';
+import SuperAdminNavbar from './components/SuperAdmin/SuperAdminNavbar/SuperAdminNavbar';
 import SuperAdminBooking from './SuperAdminBookings';
 import React from 'react'
 
@@ -36,13 +36,14 @@ function App() {
       <Switch>
       {/* User Routings   */}
       <Route path="/user/signup">     
-        <UserSignup/>
+        <Signup/>
       </Route> 
       <Route path="/login">
         <NavbarHome/>   
          <Login />
       </Route>
-      <Route path="/user/dashboard">  
+      <Route path="/user/dashboard">
+        if(localStorage.getItem("userEmail")===null) <Redirect to="/login"/>
         <UserNavbar/>        
         <UserDashboard />  
       </Route> 
@@ -78,7 +79,7 @@ function App() {
          <AdminProfile/>
       </Route>
       <Route path="/admin/dashboard">          
-         <AdminDash/>
+         <AdminDashboard/>
       </Route>
       <Route path="/admin/addRoom">  
          <AdminNavbar/>         

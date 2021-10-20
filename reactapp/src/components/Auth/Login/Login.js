@@ -77,12 +77,14 @@ function Tabs() {
       <div className="bloc-tabs">
       <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+          id="userTab"
           onClick={() => toggleTab(1)}
         >
          USER
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+          id="adminTab"
           onClick={() => toggleTab(2)}
         >
         ADMIN
@@ -90,8 +92,7 @@ function Tabs() {
       </div>
 
       <div className="content-tabs">
-        <div
-            id='userTab' 
+        <div 
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
           <h2> LOGIN</h2>
@@ -118,7 +119,6 @@ function Tabs() {
         </div>
 
         <div
-        id='adminTab' 
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
            <h2>LOGIN</h2>         

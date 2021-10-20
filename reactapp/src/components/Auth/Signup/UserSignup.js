@@ -4,7 +4,7 @@ import React from "react";
 import './AdminSignup.css';
 import { useHistory } from 'react-router-dom';
 
-function UserSignup() {
+function Signup() {
     const baseURL = localStorage.getItem("baseURL");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -64,7 +64,7 @@ function UserSignup() {
 
     )
 }
-export default UserSignup;
+export default Signup;
 
 
 

@@ -6,7 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import './UserNavbar.css';
+import './components/UserSide/UserNavbar/UserNavbar.css'
 import { useHistory } from 'react-router-dom';
 
 function SuperNavbar(){

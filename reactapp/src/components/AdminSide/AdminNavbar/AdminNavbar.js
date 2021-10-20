@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import  { Redirect } from 'react-router-dom';
 import {
     BrowserRouter as Router,
@@ -6,24 +6,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import './UserNavbar.css';
+import '../../UserSide/UserNavbar/UserNavbar.css';
 import { useHistory } from 'react-router-dom';
-import {useEffect} from 'react';
-import axios from 'axios';
 
-function SuperAdminNavbar(){
+function AdminNavbar(){
         const history = useHistory();
-        const baseURL = localStorage.getItem("baseURL");
-        const [userId, setUserId]=useState({});
-        useEffect(()=>{
-            axios.get(baseURL+'/user/detail?email='+localStorage.getItem("userEmail"))
-                .then(response => {
-                    localStorage.setItem("userId",response.data.id);
-                })
-                .catch(error => {
-                    console.log('There was an error!', error);      
-                });
-        },[])
         function logout(){
             localStorage.clear();
             sessionStorage.clear();
@@ -32,11 +19,12 @@ function SuperAdminNavbar(){
         }
         return (
             // <Router>
-                <div className="Navbar_Hotel" id="superAdminNavbar">
+                <div className="Navbar_Hotel" id="adminNavbar">
                  <a href='/' className="title"><strong>Rental Rooms</strong></a>
-                                <Link to="/superadmin/adminList" className="dashboard" id="superAdminDashboardLink">Dashboard</Link>
-                                <Link to="/superadmin/adminBookings" className="mybooking" id="superAdminBookingLink">All Bookings</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="superAdminLogoutButton">Logout</button>       
+                                <Link to="/admin/dashboard" className="dashboard" id="adminDashboardLink">Dashboard</Link>
+                                <Link to="/admin/profile" className="profile" id="adminProfileLink">Profile</Link>
+                                <Link to={"/admin/bookings/"+localStorage.getItem("adminId")} className="mybooking" id="adminBookingLink">Booking</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="adminLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>
@@ -59,4 +47,4 @@ function SuperAdminNavbar(){
             </Router> */
         )
         }
-export default SuperAdminNavbar
+export default AdminNavbar;
