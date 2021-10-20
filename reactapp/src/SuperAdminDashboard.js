@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './SuperAdminDashboard.css';
 import axios from 'axios';
+import AdminList from './AdminList';
 
 function SuperAdminDashboard(){
     const baseURL = localStorage.getItem("baseURL");
@@ -30,25 +31,14 @@ function SuperAdminDashboard(){
     return(
         
         <center>
-        <div class="table" id="userBookingBody">
-        <table>
-            <tr>
-                <th>Seller Name</th>
-                <th>Hotel Name</th>
-                <th>Hotel Address</th>
-                <th>Mobile Number</th>
-                <th>Action</th>
-            </tr>
-            {hotels.map(booking => (
-                <tr className="tb" cellSpacing="50">
-                        <td>{booking.sellerName}</td>
-                        <td>{booking.hotelName}</td>
-                        <td>{booking.hotelAddress}</td>                       
-                        <td>{booking.mobileNumber}</td>
-                        <td><button >DELETE</button></td>
-               </tr>
-            ))}   
-        </table>
+        <div class="container" id="allUserDetails">
+            {hotels.map(function (hotel) {
+                return(
+                    <AdminList hotelImageURL={hotel.hotelImageURL} sellerName={hotel.sellerName} hotelName={hotel.hotelName} hotelAddress={hotel.hotelAddress} mobileNumber={hotel.mobileNumber} hotelId={hotel.id} rooms={hotel.rooms}
+                    />
+                )
+            }
+            )}   
         </div></center>
     );
 }

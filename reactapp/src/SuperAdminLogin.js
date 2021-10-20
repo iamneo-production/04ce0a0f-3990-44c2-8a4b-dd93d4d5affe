@@ -13,6 +13,7 @@ function SuperAdminLogin() {
 
     function validateAdminDetails(){
         
+        localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
         
         let data={email,password}
         console.log("data:",data);
