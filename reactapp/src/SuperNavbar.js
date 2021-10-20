@@ -6,12 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import { Navbar,Nav} from 'react-bootstrap';
-import Editprofile from './EditProfile';
-import './UserNavbar.css';
-import UserProfleLink from './UserDashboard';
-import UserBookingLink from './UserHotelBooking';
-import UserDashboardLink from './UserDashboard';
+import './components/UserSide/UserNavbar/UserNavbar.css'
 import { useHistory } from 'react-router-dom';
 
 function SuperNavbar(){

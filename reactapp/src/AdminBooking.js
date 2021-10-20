@@ -2,12 +2,10 @@ import React, {useEffect, useState} from 'react';
 import './AdminBooking.css';
 import {withRouter} from 'react-router-dom';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 function AdminBooking(props){
     const baseURL = localStorage.getItem("baseURL");
     const [adminBookings,setAdminBookings] = useState([]);
-    const history = useHistory();
 
     useEffect(()=>{
         axios.get(baseURL+'/admin/bookings?id='+props.match.params.adminId)

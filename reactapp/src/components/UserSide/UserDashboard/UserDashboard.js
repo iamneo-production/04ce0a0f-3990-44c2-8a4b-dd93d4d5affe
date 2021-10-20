@@ -3,16 +3,19 @@ import AllHotels from './AllHotels';
 import './UserDashboard.css';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function UserDashboard(){
     const baseURL = localStorage.getItem("baseURL");
     const [hotels,setHotels]=useState([]);
-
+    const history = useHistory();
+    
     useEffect(()=>{
+        if(localStorage.getItem("userEmail")===null) history.push("/login");
         axios.get(baseURL+'/user/dashboard')
         .then(response => {
             setHotels(response.data);
-            console.log(localStorage.getItem("userEmail"));
+            console.log(localStorage.getItem("testing"));
             
         })
         .catch(error => {

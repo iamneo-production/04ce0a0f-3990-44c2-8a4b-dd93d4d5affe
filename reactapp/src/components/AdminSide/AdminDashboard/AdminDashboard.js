@@ -1,11 +1,11 @@
 import React from 'react';
 import './AdminDash.css';
-import Room from './Room';
-import AdminNavbar from './AdminNavbar';
+import Room from '../../../Room';
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-function AdminDash(){
+function AdminDashboard(){
     const baseURL = localStorage.getItem("baseURL");
     const [rooms,setRooms]=useState([]);
     const [adminData,setAdminData]=useState({});
@@ -85,4 +85,4 @@ function AdminDash(){
             </html>
     );
 }
-export default AdminDash;
+export default AdminDashboard;
