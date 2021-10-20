@@ -30,7 +30,7 @@ function AllHotels(props) {
                 <div className="main-div">
                 <Grid container spacing={1}>
                     <Grid item xs={4} sm={4} className="inner-div">
-                        <img src="" alt="logo" style={{width:"40px", height:"40px",borderRadius:"40px" ,marginTop:"2%"}}/>
+                    <input width="50px" type="image" src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1634710666~hmac=38856b65b805d361e8894e2111b60e6c"/>
                         <p style={{marginLeft:"5%"}}>Address: {props.hotelAddress}</p>
                     </Grid>
                     <Grid item xs={4} sm={4}>

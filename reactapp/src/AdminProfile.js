@@ -40,7 +40,8 @@ function AdminProfile(){
         </div>
         </div>
         <div class="editprofile">
-        <input type="image" src={adminData.hotelImageURL}/>
+        <center><input width="100px" type="image" src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1634710666~hmac=38856b65b805d361e8894e2111b60e6c"/>
+        </center>
         <br/>
         <button onClick={editProfilePage} class="editAdminProfile" id="editAdminProfile">Edit Profile</button>
         </div>

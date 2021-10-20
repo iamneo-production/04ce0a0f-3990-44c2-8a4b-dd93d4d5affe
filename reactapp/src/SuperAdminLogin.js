@@ -19,7 +19,7 @@ function SuperAdminLogin() {
 
         axios.post(baseURL+'/super/login', data)
         .then(response => {
-            if(response.data)history.push("/login");
+            if(response.data) history.push("/superadmin/adminList");
             else alert("Please Enter valid details");
         })
         .catch(error => {

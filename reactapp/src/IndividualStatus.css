@@ -16,14 +16,14 @@
     cursor: pointer;
 }
 .room-status{
-    width: 100.15px;
-    height: 24.56px;
-  text-align:center;
-  border: none;
-  background: #ffa600;
-  border-radius: 10px;
-  color:white;
-  cursor:pointer;
+      width: 100.15px;
+      height: 24.56px;
+    text-align:center;
+    border: none;
+    background: #ffa600;
+    border-radius: 10px;
+    color:white;
+    cursor:pointer;
 }
 .room-status-not{
     width: 100.15px;

@@ -22,6 +22,7 @@ import AdminProfileEdit from './AdminProfileEdit';
 import AdminBooking from './AdminBooking';
 import UserProfile from './UserProfile';
 import UserEditProfile from './UserEditProfile';
+import SuperAdminDashboard from './SuperAdminDashboard';
 import React from 'react'
 
 function App() {
@@ -101,7 +102,8 @@ function App() {
          <SuperAdminLogin/>
       </Route>
       <Route path="/superadmin/adminList">          
-         
+        <SuperNavbar/>
+        <SuperAdminDashboard/>
       </Route>
       <Route path="/superadmin/adminBookings">          
          

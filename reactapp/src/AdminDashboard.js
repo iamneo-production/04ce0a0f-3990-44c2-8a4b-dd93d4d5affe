@@ -6,7 +6,7 @@ function AdminDashboard(){
         
         <div>
             
-            <h1>Hotel name</h1>
+            <h2>Hotel name</h2>
             <div class="rooms">
             <Room/>
             <Room/>
