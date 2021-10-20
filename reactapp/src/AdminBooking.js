@@ -21,7 +21,8 @@ function AdminBooking(props){
       },[])
     return(
         <center>
-        <div class="table" id="adminBookings">
+        <div id="adminBookings">
+        <div class="table" id="bookingList">
         <table>
             <tr>
                 <th>Booking ID</th>
@@ -42,6 +43,7 @@ function AdminBooking(props){
                </tr>
             ))}   
         </table>
+        </div>
         </div>
         {/* <div className="adminBookings">
            <table className="bookinglist" align="center">

@@ -33,10 +33,10 @@ function SuperAdminNavbar(){
         return (
             // <Router>
                 <div className="Navbar_Hotel" id="superAdminNavbar">
-                 <a href='#' className="title"><strong>Rental Rooms</strong></a>
-                                <Link to="/superadmin/adminList" className="dashboard">Dashboard</Link>
-                                <Link to="/superadmin/adminBookings" className="mybooking">All Bookings</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>       
+                 <a href='/' className="title"><strong>Rental Rooms</strong></a>
+                                <Link to="/superadmin/adminList" className="dashboard" id="superAdminDashboardLink">Dashboard</Link>
+                                <Link to="/superadmin/adminBookings" className="mybooking" id="superAdminBookingLink">All Bookings</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="superAdminLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>

@@ -20,7 +20,7 @@ function SuperAdminBooking(props){
       },[])
     return(
         <center>
-        <div class="table" id="adminBookings">
+        <div class="table" id="allAdminDetails">
         <table>
             <tr>
                 <th>Admin ID</th>

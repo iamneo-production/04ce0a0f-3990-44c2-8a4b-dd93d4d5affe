@@ -33,11 +33,11 @@ function UserNavbar(){
         return (
             // <Router>
                 <div className="Navbar_Hotel" id="userNavbar">
-                 <a href='#' className="title"><strong>Rental Rooms</strong></a>
-                                <Link to="/user/dashboard" className="dashboard">Dashboard</Link>
-                                <Link to={"/user/profile/"+localStorage.getItem("userId")} className="profile">Profile</Link>
-                                <Link to={"/user/bookings/"+localStorage.getItem("userId")} className="mybooking">MyBooking</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton">Logout</button>       
+                 <a href='/' className="title"><strong>Rental Rooms</strong></a>
+                                <Link to="/user/dashboard" className="dashboard" id="userDashboardLink">Dashboard</Link>
+                                <Link to={"/user/profile/"+localStorage.getItem("userId")} className="profile" id="userProfileLink">Profile</Link>
+                                <Link to={"/user/bookings/"+localStorage.getItem("userId")} className="mybooking" id="userBookingLink">MyBooking</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="userLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>

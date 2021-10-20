@@ -110,7 +110,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<Link to="/user/signup">Click Here</Link></p>
+                    <p id='userSignupLink'>New to Booking? <Link to="/user/signup">Click Here</Link></p>
                 </div>  
             </div>
         </div>
@@ -137,7 +137,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<Link to="/admin/signup">Click Here</Link></p>
+                    <p id='adminSignupLink'>New to Booking? <Link to="/admin/signup">Click Here</Link></p>
                 </div>
             </div>
         </div>
