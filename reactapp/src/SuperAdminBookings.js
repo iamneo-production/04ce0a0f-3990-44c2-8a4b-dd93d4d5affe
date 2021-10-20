@@ -9,7 +9,7 @@ function SuperAdminBooking(props){
     const history = useHistory();
 
     useEffect(()=>{
-        axios.get(baseURL+'/admin/bookings?id='+props.match.params.adminId)
+        axios.get(baseURL+'/super/bookings')
         .then(response => {
             setAdminBookings(response.data);
           
@@ -23,8 +23,8 @@ function SuperAdminBooking(props){
         <div class="table" id="adminBookings">
         <table>
             <tr>
-                <th>Booking ID</th>
-                <th>User ID</th>
+                <th>Admin ID</th>
+                <th>Hotel Name</th>
                 <th>Room No</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -32,8 +32,8 @@ function SuperAdminBooking(props){
             </tr>
             {adminBookings.map(booking => (
                 <tr className="tb" cellSpacing="50">
-                        <td>{booking.id}</td>
-                        <td>{booking.userId}</td>
+                        <td>{booking.adminId}</td>
+                        <td>{booking.hotelName}</td>
                         <td>{booking.roomNo}</td>
                         <td>{booking.price}</td>
                         <td>1</td>                        

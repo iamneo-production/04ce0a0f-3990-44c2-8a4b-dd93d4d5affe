@@ -62,7 +62,7 @@ function Tabs() {
     history.push("/user/signup");
   }
   function gotoadminSignup(){
-    history.push("/user/signup");
+    history.push("/admin/signup");
   }
 
   const toggleTab = (index) => {
