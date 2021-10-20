@@ -6,7 +6,7 @@ import UserHotelBooking from './UserHotelBooking';
 import Login from './Login';
 import AdminSignup from './AdminSignup';
 import UserSignup from './UserSignup';
-import UserDashboard from './UserDashboard';
+import UserDashboard from './components/UserSide/UserDashboard/UserDashboard';
 import HotelDetails from './HotelDetails';
 import SuperAdminLogin from './SuperAdminLogin';
 import SuperNavbar from './SuperNavbar';
