@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import './AdminEditRoom.css';
 
 function SuperAdminLogin() {
+    localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
     const baseURL = localStorage.getItem("baseURL");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -13,7 +14,7 @@ function SuperAdminLogin() {
 
     function validateAdminDetails(){
         
-        localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
+            
         
         let data={email,password}
         console.log("data:",data);

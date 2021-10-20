@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 
 function Tabs() {
+  
+  localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
   const baseURL = localStorage.getItem("baseURL");
   const userSignup = baseURL+'/user/signup';
   const adminSignup = baseURL+'/admin/signup';
