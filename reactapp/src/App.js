@@ -43,7 +43,6 @@ function App() {
          <Login />
       </Route>
       <Route path="/user/dashboard">
-        if(localStorage.getItem("userEmail")===null) <Redirect to="/login"/>
         <UserNavbar/>        
         <UserDashboard />  
       </Route> 
