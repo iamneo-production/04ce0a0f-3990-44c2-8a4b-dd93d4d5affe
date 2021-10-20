@@ -28,6 +28,7 @@ function AdminProfileEdit(props){
             setPassword(response.data.password);
             setHotelName(response.data.hotelName);
             setHotelAddress(response.data.hotelAddress);
+            console.log(response.data);
         })
         .catch(error => {
             console.log('There was an error!', error);      

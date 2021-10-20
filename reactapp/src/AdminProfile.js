@@ -40,7 +40,8 @@ function AdminProfile(){
         </div>
         </div>
         <div class="editprofile">
-        <input type="image" src={adminData.hotelImageURL}/>
+        <center><input class="image-icon" align="center" type="image" src="https://www.life-refine.com/Login101/avatar.png" width="100px"/>
+        </center>
         <br/>
         <button onClick={editProfilePage} class="editAdminProfile" id="editAdminProfile">Edit Profile</button>
         </div>

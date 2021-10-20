@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 import {useEffect} from 'react';
 import axios from 'axios';
 
-function UserNavbar(){
+function SuperAdminNavbar(){
         const history = useHistory();
         const baseURL = localStorage.getItem("baseURL");
         const [userId, setUserId]=useState({});
@@ -32,12 +32,11 @@ function UserNavbar(){
         }
         return (
             // <Router>
-                <div className="Navbar_Hotel" id="userNavbar">
+                <div className="Navbar_Hotel" id="superAdminNavbar">
                  <a href='/' className="title"><strong>Rental Rooms</strong></a>
-                                <Link to="/user/dashboard" className="dashboard" id="userDashboardLink">Dashboard</Link>
-                                <Link to={"/user/profile/"+localStorage.getItem("userId")} className="profile" id="userProfileLink">Profile</Link>
-                                <Link to={"/user/bookings/"+localStorage.getItem("userId")} className="mybooking" id="userBookingLink">MyBooking</Link>
-                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="userLogoutButton">Logout</button>       
+                                <Link to="/superadmin/adminList" className="dashboard" id="superAdminDashboardLink">Dashboard</Link>
+                                <Link to="/superadmin/adminBookings" className="mybooking" id="superAdminBookingLink">All Bookings</Link>
+                                <button onClick={()=>{logout()}} className="UserLogoutButton" id="superAdminLogoutButton">Logout</button>       
                     
                 </div>
                 /* <div>
@@ -60,4 +59,4 @@ function UserNavbar(){
             </Router> */
         )
         }
-export default UserNavbar
+export default SuperAdminNavbar

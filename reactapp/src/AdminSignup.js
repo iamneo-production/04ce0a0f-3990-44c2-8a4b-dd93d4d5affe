@@ -10,7 +10,7 @@ function AdminSignup() {
     const [password,setPassword]=useState("");
     const [mobileNumber,setMobileNumber]=useState("");
     const [userRole,setUserRole]=useState("admin");
-    const [adminName,setAdminName]=useState("");
+    const [sellerName,setSellerName]=useState("");
     const [hotelName,setHotelName]=useState("");
     const [hotelImageURL,setHotelImageURL]=useState("");
     const [hotelAddress,setHotelAddress]=useState("");
@@ -20,7 +20,7 @@ function AdminSignup() {
 
     function sendAdminDetails(){
         
-        let data={email,password,mobileNumber,userRole,adminName,hotelName,hotelImageURL,hotelAddress}
+        let data={email,password,mobileNumber,userRole,sellerName,hotelName,hotelImageURL,hotelAddress}
         console.log("data:",data);
 
         axios.post(baseURL+'/admin/signup', data)
@@ -56,7 +56,7 @@ function AdminSignup() {
                 </select>
                 <br />
                 <br />
-                <input type="text" name="adminname" size="15" id="adminname" placeholder="  Enter Admin Name" value={adminName} onChange={(e)=>{setAdminName(e.target.value)}}/> 
+                <input type="text" name="adminname" size="15" id="adminname" placeholder="  Enter Admin Name" value={sellerName} onChange={(e)=>{setSellerName(e.target.value)}}/> 
                 <br/><br/>
                 <input type="text" name="hotelname" size="15" id="hotelname" placeholder="  Enter Hotel Name" value={hotelName} onChange={(e)=>{setHotelName(e.target.value)}}/> 
                 <br/><br/>

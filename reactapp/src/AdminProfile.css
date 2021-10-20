@@ -33,3 +33,6 @@
   color:white;
   cursor:pointer;
 }
+.inner-div input{
+    padding-left:35%;
+}

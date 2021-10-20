@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import './AdminEditRoom.css';
 
 function SuperAdminLogin() {
+    localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
     const baseURL = localStorage.getItem("baseURL");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -13,13 +14,14 @@ function SuperAdminLogin() {
 
     function validateAdminDetails(){
         
+            
         
         let data={email,password}
         console.log("data:",data);
 
         axios.post(baseURL+'/super/login', data)
         .then(response => {
-            if(response.data)history.push("/login");
+            if(response.data) history.push("/superadmin/adminList");
             else alert("Please Enter valid details");
         })
         .catch(error => {

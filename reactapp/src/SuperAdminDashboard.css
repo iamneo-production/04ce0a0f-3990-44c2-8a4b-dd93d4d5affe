@@ -1,0 +1,66 @@
+.container{
+    margin-top: 9%;
+    margin:2%;
+    width:80%;
+}
+
+.row{
+    margin-top: 1%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col{
+    padding: 1%;
+    float: left;
+    font-size: 20px;
+    width: 21%;
+}
+
+.adminimg{
+    width: 5%;
+}
+
+.adminimg>img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.left{
+    text-align: left;
+    width: 10%;
+}
+
+.mid{
+    text-align: center;
+}
+
+.last{
+    text-align: right;
+}
+
+.last>button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+.icon{
+    background: url("https://icon-library.com/images/icon-delete/icon-delete-16.jpg") no-repeat;
+    float: left;
+    width: 100px;
+    height: 400px;
+
+}

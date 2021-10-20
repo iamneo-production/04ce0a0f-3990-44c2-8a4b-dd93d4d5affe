@@ -105,7 +105,7 @@ function UserDashboard(){
         
     // ];
     return (
-        <div className="user-dashboard" style={{border:"2px solid #ff6347",borderRadius:"5px"}}>
+        <div className="user-dashboard" id="userDashboard" style={{border:"2px solid #ff6347",borderRadius:"5px"}}>
             {hotels.map(function (hotel) {
                 return(
                     <AllHotels hotelImageURL={hotel.hotelImageURL} hotelName={hotel.hotelName} hotelAddress={hotel.hotelAddress} mobileNumber={hotel.mobileNumber} hotelId={hotel.id} rooms={hotel.rooms}

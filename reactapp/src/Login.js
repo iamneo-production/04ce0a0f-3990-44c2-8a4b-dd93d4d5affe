@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 
 function Tabs() {
+  
+  localStorage.setItem("baseURL","https://8080-aaafefdebebfaaffabddbdacaffcfecebade.examlyiopb.examly.io");
   const baseURL = localStorage.getItem("baseURL");
   const userSignup = baseURL+'/user/signup';
   const adminSignup = baseURL+'/admin/signup';
@@ -62,7 +64,7 @@ function Tabs() {
     history.push("/user/signup");
   }
   function gotoadminSignup(){
-    history.push("/user/signup");
+    history.push("/admin/signup");
   }
 
   const toggleTab = (index) => {
@@ -110,7 +112,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<Link to="/user/signup">Click Here</Link></p>
+                    <p id='userSignupLink'>New to Booking? <Link to="/user/signup">Click Here</Link></p>
                 </div>  
             </div>
         </div>
@@ -137,7 +139,7 @@ function Tabs() {
                 </div>
                 <br/>
                 <div className='userSignupLink' >
-                    <p id='userSignupLink'>New to Booking?<Link to="/admin/signup">Click Here</Link></p>
+                    <p id='adminSignupLink'>New to Booking? <Link to="/admin/signup">Click Here</Link></p>
                 </div>
             </div>
         </div>

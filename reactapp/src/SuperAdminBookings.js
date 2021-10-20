@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import './AdminBooking.css';
-import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-function AdminBooking(props){
+function SuperAdminBooking(props){
     const baseURL = localStorage.getItem("baseURL");
     const [adminBookings,setAdminBookings] = useState([]);
     const history = useHistory();
 
     useEffect(()=>{
-        axios.get(baseURL+'/admin/bookings?id='+props.match.params.adminId)
+        axios.get(baseURL+'/super/bookings')
         .then(response => {
             setAdminBookings(response.data);
           
@@ -21,12 +20,11 @@ function AdminBooking(props){
       },[])
     return(
         <center>
-        <div id="adminBookings">
-        <div class="table" id="bookingList">
+        <div class="table" id="allAdminDetails">
         <table>
             <tr>
-                <th>Booking ID</th>
-                <th>User ID</th>
+                <th>Admin ID</th>
+                <th>Hotel Name</th>
                 <th>Room No</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -34,8 +32,8 @@ function AdminBooking(props){
             </tr>
             {adminBookings.map(booking => (
                 <tr className="tb" cellSpacing="50">
-                        <td>{booking.id}</td>
-                        <td>{booking.userId}</td>
+                        <td>{booking.adminId}</td>
+                        <td>{booking.hotelName}</td>
                         <td>{booking.roomNo}</td>
                         <td>{booking.price}</td>
                         <td>1</td>                        
@@ -43,7 +41,6 @@ function AdminBooking(props){
                </tr>
             ))}   
         </table>
-        </div>
         </div>
         {/* <div className="adminBookings">
            <table className="bookinglist" align="center">
@@ -71,4 +68,4 @@ function AdminBooking(props){
     );
 }
 
-export default withRouter(AdminBooking);
+export default SuperAdminBooking;
