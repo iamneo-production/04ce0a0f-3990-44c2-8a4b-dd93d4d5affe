@@ -32,7 +32,6 @@ function AdminList(props) {
         return (
             
             <div class="row">
-            <div class="col adminimg"><img width="50px" src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1634710666~hmac=38856b65b805d361e8894e2111b60e6c" alt="admin image"/></div>
             <div class="col left"><p>{props.sellerName}</p></div>
             <div class="col mid"><p>{props.hotelName}</p></div>
             <div class="col mid"><p>{props.hotelAddress}</p></div>
